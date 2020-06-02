@@ -3,12 +3,15 @@ A toolkit for web-birding on eBird and biolovision (ornitho, faune-...)
 
 ## eBird
 
+### Target with Personal Location
+Build a target list for a personal location based on personal location. Simply type in the name of the location you want (case and accent sensitive) and the location will be updated upon selection.
+
 ### Convert Target List to CSV
 Create [comma-separeted value (CSV)](https://en.wikipedia.org/wiki/Comma-separated_values) file from the **Target** page [ebird.org/targets](https://ebird.org/targets). The exported table contains the following columns:
 
 | `rank` | `common_name` | `scientifique_name` | `frequency` | `link_map` |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 1	 | Brent Goose 	 | Branta bernicla	 | 1.60%	 | https://ebird.org/map/brant?gp=true&amp;yr=all&amp;env.minX=-5.144&amp;env.minY=41.334&amp;env.maxX=9.56&amp;env.maxY=51.093
+| 1	 | Collared Dove 	 | Streptopelia decaocto	 | 11.12%	 | https://ebird.org/map/brant?gp=true&amp;yr=all&amp;env.minX=-5.144&amp;env.minY=41.334&amp;env.maxX=9.56&amp;env.maxY=51.093
 
 ![Export of Target list](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/ExportTargetList.PNG?raw=true)
 
