@@ -17,6 +17,9 @@ chrome.runtime.onInstalled.addListener(function() {
         }),
         new chrome.declarativeContent.PageStateMatcher({
           pageUrl: {queryContains: 'm_id=8'},
+        }),
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: {urlContains: 'ebird.org/targets'},
         })
       ],
       
@@ -24,3 +27,4 @@ chrome.runtime.onInstalled.addListener(function() {
     }]);
   });
 });
+

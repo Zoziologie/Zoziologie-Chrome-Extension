@@ -9,9 +9,9 @@ function toCSV(filename, fullTable){
     
     // Add header
     if (fullTable){
-      data.push(['Number','Common Name','Scientifique Name','Latest date','nidification','link_observations','link_stat','link_info'])
+      data.push(['number','common_name','scientifique_name','latest_date','nidification','link_observations','link_stat','link_info'])
     } else {
-      data.push(['Number','Common Name','Scientifique Name'])
+      data.push(['number','common_name','scientifique_name'])
     }
     
     // Add column
@@ -34,18 +34,18 @@ function toCSV(filename, fullTable){
     
     // Add header
     if (fullTable){
-      data.push(['Number','Common Name','observers','places','link_observations','link_stat','link_info','photo'])
+      data.push(['number','common_name','observers','places','link_observations','link_stat','link_info','photo'])
     } else {
-      data.push(['Number','Common Name'])
+      data.push(['number','common_name'])
     }
     // Add column
     Array.from(document.querySelectorAll('.rowlight, .rowdark')).forEach(function(row){
       var d=[];
-      d.push(parseInt(row.querySelectorAll('span')[0].innerHTML.split('&nbsp;')[1])) //number
+      d.push(row.querySelectorAll('span')[0].innerHTML.split('&nbsp;')[1]) //number
       d.push(row.querySelectorAll('b')[0].innerText) // English
       if (fullTable){
-        d.push(row.querySelectorAll('col-sm-4')[1].innerText) //observer
-        d.push(row.querySelectorAll('col-sm-4')[2].innerText) //places
+        d.push(row.querySelectorAll('.col-sm-4')[1].innerText) //observer
+        d.push(row.querySelectorAll('.col-sm-4')[2].innerText) //places
         d.push(row.querySelectorAll('a')[0].href) // link observations
         row.querySelectorAll('a')[1] ? d.push(row.querySelectorAll('a')[1].href) : d.push("") // link statistic 
         row.querySelectorAll('a')[2] ? d.push(row.querySelectorAll('a')[2].href) : d.push("") // link information.

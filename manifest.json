@@ -20,6 +20,10 @@
     {
       "matches": ["*://www.faune-france.org/*", "*://www.ornitho.ch/*", "*://www.ornitho.it/*", "*://www.ornitho.at/*", "*://www.ornitho.de/*", "*://www.ornitho.cat/*", "*://ornitho.lu/*", "*://ornitho.pl/*", "*://www.ornitho.eus//*", "*://www.faune-Champagne-ardenne.org/*", "*://www.faune-alsace.org/*", "*://www.faune-lorraine.org/*", "*://www.faune-Charente.org/*", "*://www.faune-Charente-maritime.org/*", "*://www.faune-limousin.eu/*", "*://www.nature79.org/*", "*://www.faune-aquitaine.org/*", "*://vienne.lpo.fr/*", "*://www.faune-ain.org/*", "*://www.faune-auvergne.org/*", "*://www.faune-ardeche.org/*", "*://www.faune-drome.org/*", "*://haute-savoie.lpo.fr/*", "*://www.faune-isere.org/*", "*://www.faune-loire.org/*", "*://www.faune-rhone.org/*", "*://www.faune-savoie.org/*", "*://www.faune-bretagne.org/*", "*://www.oiseaux-cote-dor.org/*", "*://franche-comte.lpo.fr/*", "*://www.faune-nievre.org/*", "*://www.faune-yonne.org/*", "*://www.faune-Cher.org/*", "*://www.faune-touraine.org/*", "*://www.faune-lr.org/*", "*://www.faune-tarn-aveyron.org/*", "*://www.faune-iledefrance.org/*", "*://www.faune-loire-atlantique.org/*", "*://www.faune-anjou.org/*", "*://www.faune-maine.org/*", "*://www.faune-maine.org/*", "*://www.faune-vendee.org/*", "*://www.faune-paca.org/*", "*://www.faune-martinique.org/*", "*://www.faune-reunion.fr/*", "*://www.faune-guyane.fr/*"],
       "js": ["js/jquery-3.5.1.min.js","js/biolovision.js"]
+    },
+    {
+      "matches": ["*://eBird.org/targets*"],
+      "js": ["js/jquery-3.5.1.min.js","js/eBird.js"]
     }
   ],
   "icons": {

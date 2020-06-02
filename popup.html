@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <html>
 <head>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/leaflet.css" rel="stylesheet">
   <link href="css/leaflet.draw.css" rel="stylesheet">
+  <link href="css/select2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/select2-bootstrap.min.css">
   <!--<link href="css/custom.css" rel="stylesheet">-->
   <style>
     #mainPopup {
-      padding: 10px;
+      padding: 20px 10px;
     }
     #BiolovisionToCsv{
       display: none;
@@ -15,6 +17,10 @@
     }
     #BiolovisionMap{
       display: none;
+    }
+    #eBirdTarget{
+      display: none;
+      width: 340px;
     }
     #map{
       width: 500px;
@@ -52,15 +58,42 @@
     <div id="BiolovisionMap" class="container">
       <h6>Period: Season around today</h6>
       <div class="row mb-3"><div class="col">
-           <a href="#" class="plusoumoins" value="3">[+/-3d]</a>
-           <a href="#" class="plusoumoins" value="7">[+/-7d]</a>
-           <a href="#" class="plusoumoins" value="14">[+/-14d]</a>
-           <a href="#" class="plusoumoins" value="30">[+/1m]</a>
+        <a href="#" class="plusoumoins" value="3">[+/-3d]</a>
+        <a href="#" class="plusoumoins" value="7">[+/-7d]</a>
+        <a href="#" class="plusoumoins" value="14">[+/-14d]</a>
+        <a href="#" class="plusoumoins" value="30">[+/1m]</a>
       </div></div>
       <h6>Query Coordinates</h6>
       <div id="map" class="form-group"></div>
       <button class="btn btn-secondary" id="drawRectangle">Draw Rectangle on Map</button>
     </div>
+    <div id="eBirdTarget"class="container">
+      <h6>Target List to CSV</h6>
+      <div class="form-group">
+        <label for="filename2">Filename</label>
+        <div class="input-group mb-3">
+          <input  type="text" class="form-control" id="filename2" value="my_data" ></input>
+          <div class="input-group-append">
+            <span class="input-group-text">.csv</span>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" id="eBirdTargetToCsvButton">BiolovisionToCsv</button>
+      <small class="form-text text-muted">Convert eBird target list to CSV file.</small>
+      <hr>
+      <h6>Custom Loction in Target List</h6>
+      <div class="form-group">
+        <label for="select_r1">My Location in <b>Region</b></label>
+        <select class="form-control" id="select_r1"></select>
+      </div>
+      <div class="form-group">
+        <label for="select_r2">My Location in <b>For your:</b></label>
+        <select class="form-control" id="select_r2"></select>
+      </div>
+    </div>
+    <!--<footer>
+      <a href="https://zoziologie.raphaelnussbaumer.com/" target="_blank"><img src="images/logo_16.png"> Zoziologie. </a> <a href="mailto:rafnuss@gmail.com" target="_blank">Raphaël Nussbaumer</a>. Copyright 2020.
+    </footer>-->
   </div>
   
   
@@ -70,6 +103,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/leaflet.js"></script>
   <script src="js/leaflet.draw.js"></script>
+  <script src="js/select2.min.js" charset="UTF-8"></script>
   <script src="js/popup.js"></script>
 </body>
 </html>
