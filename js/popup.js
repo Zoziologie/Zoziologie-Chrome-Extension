@@ -63,8 +63,6 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
       });
     });
   }
-  
-  
 });
 
 

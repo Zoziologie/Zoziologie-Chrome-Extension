@@ -9,9 +9,9 @@ function toCSV(filename, fullTable){
     
     // Add header
     if (fullTable){
-      data.push(['number','common_name','scientifique_name','latest_date','nidification','link_observations','link_stat','link_info'])
+      data.push(['number','common_name','scientific_name','latest_date','breeding','link_observation','link_stat','link_info'])
     } else {
-      data.push(['number','common_name','scientifique_name'])
+      data.push(['number','common_name','scientific_name'])
     }
     
     // Add column

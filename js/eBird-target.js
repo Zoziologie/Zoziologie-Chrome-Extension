@@ -2,12 +2,16 @@
 
 var url = new URL(window.location.href);
 
+jQuery('#targets-list-type').show()
+jQuery('#targets-submit').show()
+
+
 function toCSV(filename){
   
   var data=[];
   
   // Add header
-  data.push(['rank','common_name','scientifique_name','frequency','link_map'])
+  data.push(['rank','common_name','scientific_name','frequency','link_map'])
 
   // Add column
   Array.from(document.getElementsByClassName('ResultsStats')).forEach(function(res){

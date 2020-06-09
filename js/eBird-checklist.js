@@ -11,6 +11,7 @@ function copyChecklistLinkSpecies(id){\
   dummy.select();\
   document.execCommand("copy");\
   document.body.removeChild(dummy);\
+  alert("Link copied to clipboad: "+text)\
 }\
 '
 document.getElementsByTagName('head')[0].appendChild(script);
