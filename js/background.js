@@ -20,6 +20,9 @@ chrome.runtime.onInstalled.addListener(function() {
         }),
         new chrome.declarativeContent.PageStateMatcher({
           pageUrl: {urlContains: 'ebird.org/targets'},
+        }),
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: {urlContains: 'ebird.org/checklist'},
         })
       ],
       
