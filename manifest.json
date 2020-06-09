@@ -28,6 +28,10 @@
     {
       "matches": ["*://eBird.org/checklist*"],
       "js": ["js/eBird-checklist.js"]
+    },
+    {
+      "matches": ["*://macaulaylibrary.org/asset/*"],
+      "js": ["js/macaulaylibrary.js"]
     }
   ],
   "icons": {
