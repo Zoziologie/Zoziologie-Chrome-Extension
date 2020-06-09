@@ -1,4 +1,4 @@
-# Chrome-Extension
+# Zoziologie Chrome Extension
 A toolkit for web-birding on eBird and Biolovision (ornitho, faune-...)
 
 ## eBird
