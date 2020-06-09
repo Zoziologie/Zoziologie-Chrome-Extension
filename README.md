@@ -22,7 +22,7 @@ For instance, clicking on the link icon of Madagascar Pratincole will copy the u
 
 ### Download Pictures
 Download any photos on the Macaulaylibrary at 2400px wide resolution (the original is only available for the author). The link **Download 2400** is available on all pages. 
-![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/Download2400.png?raw=true)
+![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/Download2400.PNG?raw=true)
 
 ## Biolovision
 
