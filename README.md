@@ -15,6 +15,14 @@ Create [comma-separeted value (CSV)](https://en.wikipedia.org/wiki/Comma-separat
 
 ![Export of Target list](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/ExportTargetList.PNG?raw=true)
 
+### Anchor Link
+Create an anchor link for species entry in your checklist. Click on the link icon of the species to copy on your clipboard the url of this entry which you can then share. 
+![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/Anchorpoint.png?raw=true)
+For instance, clicking on the link icon of Madagascar pratincole will copy the url of the checklist with "#madpra1" at the end linking to this exact position on the page.
+
+### Download Picture
+Download any pictures on the macaulaylibrary at 2400px wide resolution (i.e. the original is only available for the author). The button/link "Download 2400" appears on all pages. 
+![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/Download2400.png?raw=true)
 
 ## Biolovision
 
