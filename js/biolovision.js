@@ -96,10 +96,10 @@ function plusoumoins(value){
   document.getElementById("sp_DChoiceSeason").checked = true;
   
   var date = new Date()
-  date.setDate(date.getDate() + value)
+  date.setDate(date.getDate() - value)
   document.querySelector('input[name="sp_DSeasonFromDay"]').value = date.getDate();
   document.querySelector('select[name="sp_DSeasonFromMonth"]').selectedIndex = date.getMonth();
-  date.setDate(date.getDate() - 2*value)
+  date.setDate(date.getDate() + 2*value)
   document.querySelector('select[name="sp_DSeasonToMonth"]').selectedIndex = date.getMonth();
   document.querySelector('input[name="sp_DSeasonToDay"]').value = date.getDate();
 }
