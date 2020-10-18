@@ -5,9 +5,14 @@
   <link href="css/leaflet.css" rel="stylesheet">
   <link href="css/leaflet.draw.css" rel="stylesheet">
   <link href="css/select2.min.css" rel="stylesheet">
+  <link href="css/MarkerCluster.css" rel="stylesheet">
+  <link href="css/MarkerCluster.Default.css" rel="stylesheet">
   <link rel="stylesheet" href="css/select2-bootstrap.min.css">
   <!--<link href="css/custom.css" rel="stylesheet">-->
   <style>
+    html, body{
+      height: fit-content;
+    }
     #mainPopup {
       padding: 20px 10px;
     }
@@ -33,6 +38,19 @@
       margin-left: -100px;
       z-index: 1000;
     }
+    #alertDrawRectSucc{
+      display: none;
+      position: absolute;
+      top: 120px;
+      z-index: 1001;
+      width: 500px;
+    }
+    #alertPlusOuMoinsSucc{
+      display: none;
+      position: absolute;
+      z-index: 1001;
+      width: 500px;
+    }
   </style>
 </head>
 <body>
@@ -57,6 +75,12 @@
     </div>
     <div id="BiolovisionMap" class="container">
       <h6>Period: Season around today</h6>
+      <div class="alert alert-success" role="alert" id="alertPlusOuMoinsSucc">
+        Dates updated on the search engine.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <div class="row mb-3"><div class="col">
         <a href="#" class="plusoumoins" value="3">[+/-3d]</a>
         <a href="#" class="plusoumoins" value="7">[+/-7d]</a>
@@ -64,6 +88,12 @@
         <a href="#" class="plusoumoins" value="30">[+/1m]</a>
       </div></div>
       <h6>Query Coordinates</h6>
+      <div class="alert alert-success" role="alert" id="alertDrawRectSucc">
+        Coordinates updated on the search engine.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <div id="map" class="form-group"></div>
       <button class="btn btn-secondary" id="drawRectangle">Draw Rectangle on Map</button>
     </div>
@@ -105,5 +135,6 @@
   <script src="js/leaflet.draw.js"></script>
   <script src="js/select2.min.js" charset="UTF-8"></script>
   <script src="js/popup.js"></script>
+  <script src="js/leaflet.markercluster.js"></script>
 </body>
 </html>
