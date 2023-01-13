@@ -11,7 +11,6 @@ document.querySelectorAll('.Observation').forEach(function (e) {
 
 document.addEventListener("click", function (e) {
   const target = e.target.closest(".zoziology-ebird-link");
-  console.log(target)
   if (target) {
     const text = window.location.href.split("#")[0] + "#" + target.getAttribute("value");
     if (document.querySelector('#copied')) {

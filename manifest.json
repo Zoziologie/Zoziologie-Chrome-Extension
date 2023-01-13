@@ -2,20 +2,16 @@
   "name": "Zoziologie",
   "version": "1.0",
   "description": "Toolkit for web-birding",
-  "background": {
-    "service_worker": "js/background.js"
-  },
   "permissions": [
     "activeTab",
     "scripting"
   ],
   "action": {
-    "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/logo_16.png",
-      "32": "images/logo_32.png",
-      "48": "images/logo_48.png",
-      "128": "images/logo_128.png"
+      "16": "logo/logo_16.png",
+      "32": "logo/logo_32.png",
+      "48": "logo/logo_48.png",
+      "128": "logo/logo_128.png"
     }
   },
   "content_scripts": [
@@ -69,8 +65,7 @@
         "*://www.faune-guyane.fr/*"
       ],
       "js": [
-        "js/jquery-3.6.3.min.js",
-        "js/biolovision.js"
+        "biolovision.js"
       ]
     },
     {
@@ -78,8 +73,7 @@
         "*://eBird.org/targets*"
       ],
       "js": [
-        "js/jquery-3.6.3.min.js",
-        "js/eBird-target.js"
+        "eBird-target.js"
       ]
     },
     {
@@ -87,23 +81,23 @@
         "*://eBird.org/checklist*"
       ],
       "js": [
-        "js/eBird-checklist.js"
+        "eBird-checklist.js"
       ]
     },
     {
       "matches": [
-        "*://macaulaylibrary.org/asset/*"
+        "*://macaulaylibrary.org/asset*"
       ],
       "js": [
-        "js/macaulaylibrary.js"
+        "macaulaylibrary.js"
       ]
     }
   ],
   "icons": {
-    "16": "images/logo_16.png",
-    "32": "images/logo_32.png",
-    "48": "images/logo_48.png",
-    "128": "images/logo_128.png"
+    "16": "logo/logo_16.png",
+    "32": "logo/logo_32.png",
+    "48": "logo/logo_48.png",
+    "128": "logo/logo_128.png"
   },
   "manifest_version": 3
 }

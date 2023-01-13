@@ -2,7 +2,7 @@
 const print_btn = document.querySelector('.Button.Button--small.Button--hollow')
 
 if (print_btn) {
-  document.querySelector('.Button.Button--small.Button--hollow').parentElement.insertAdjacentHTML('beforeend', `
+  print_btn.parentElement.insertAdjacentHTML('beforeend', `
 <a href="#" class="Button Button--small Button--hollow" style="margin-left: 2px;" id="zoziology-target2csv">
   <svg class="Icon Icon--download u-inline-xs" role="presentation"><use xlink:href="#Icon--download"></use></svg>
   <span class="u-showForMedium">Download (csv)</span>
@@ -42,23 +42,3 @@ document.addEventListener("click", function (e) {
     }
   }
 });
-
-
-function toLocationr1(text, id) {
-  jQuery('input[name="region"]').val(text)
-  jQuery('#targets-region-input-hidden').val(id)
-}
-
-function toLocation(r, text, id) {
-  if (r == "r1") {
-    jQuery('input[name="region"]').val(text)
-    jQuery('#targets-region-input-hidden').val(id)
-  } else if (r == "r2") {
-    // add option
-    jQuery('#targets-comparison-region').append($('<option>', {
-      value: id,
-      text: text,
-      selected: true
-    }));
-  }
-}
