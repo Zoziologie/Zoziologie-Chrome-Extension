@@ -1,5 +1,6 @@
 <!DOCTYPE html lang="en">
 <html>
+
 <head>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/leaflet.css" rel="stylesheet">
@@ -10,42 +11,51 @@
   <link rel="stylesheet" href="css/select2-bootstrap.min.css">
   <!--<link href="css/custom.css" rel="stylesheet">-->
   <style>
-    html, body{
+    html,
+    body {
       height: fit-content;
     }
+
     #mainPopup {
       padding: 20px 10px;
     }
-    #BiolovisionToCsv{
+
+    #BiolovisionToCsv {
       display: none;
       width: 288px;
     }
-    #BiolovisionMap{
+
+    #BiolovisionMap {
       display: none;
     }
-    #eBirdTarget{
+
+    #eBirdTarget {
       display: none;
       width: 340px;
     }
-    #map{
+
+    #map {
       width: 500px;
       height: 300px;
     }
-    #drawRectangle{
+
+    #drawRectangle {
       position: absolute;
       top: 112px;
       left: 50%;
       margin-left: -100px;
       z-index: 1000;
     }
-    #alertDrawRectSucc{
+
+    #alertDrawRectSucc {
       display: none;
       position: absolute;
       top: 120px;
       z-index: 1001;
       width: 500px;
     }
-    #alertPlusOuMoinsSucc{
+
+    #alertPlusOuMoinsSucc {
       display: none;
       position: absolute;
       z-index: 1001;
@@ -53,6 +63,7 @@
     }
   </style>
 </head>
+
 <body>
   <div id="mainPopup">
     <div class="container" id="BiolovisionToCsv">
@@ -64,7 +75,7 @@
         </div>
         <label for="filename">Filename</label>
         <div class="input-group mb-3">
-          <input  type="text" class="form-control" id="filename" value="my_data" ></input>
+          <input type="text" class="form-control" id="filename" value="my_data"></input>
           <div class="input-group-append">
             <span class="input-group-text" id="basic-addon3">.csv</span>
           </div>
@@ -81,12 +92,14 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="row mb-3"><div class="col">
-        <a href="#" class="plusoumoins" value="3">[+/-3d]</a>
-        <a href="#" class="plusoumoins" value="7">[+/-7d]</a>
-        <a href="#" class="plusoumoins" value="14">[+/-14d]</a>
-        <a href="#" class="plusoumoins" value="30">[+/1m]</a>
-      </div></div>
+      <div class="row mb-3">
+        <div class="col">
+          <a href="#" class="plusoumoins" value="3">[+/-3d]</a>
+          <a href="#" class="plusoumoins" value="7">[+/-7d]</a>
+          <a href="#" class="plusoumoins" value="14">[+/-14d]</a>
+          <a href="#" class="plusoumoins" value="30">[+/1m]</a>
+        </div>
+      </div>
       <h6>Query Coordinates</h6>
       <div class="alert alert-success" role="alert" id="alertDrawRectSucc">
         Coordinates updated on the search engine.
@@ -97,12 +110,12 @@
       <div id="map" class="form-group"></div>
       <button class="btn btn-secondary" id="drawRectangle">Draw Rectangle on Map</button>
     </div>
-    <div id="eBirdTarget"class="container">
+    <div id="eBirdTarget" class="container">
       <h6>Target List to CSV</h6>
       <div class="form-group">
         <label for="filename2">Filename</label>
         <div class="input-group mb-3">
-          <input  type="text" class="form-control" id="filename2" value="my_data" ></input>
+          <input type="text" class="form-control" id="filename2" value="my_data"></input>
           <div class="input-group-append">
             <span class="input-group-text">.csv</span>
           </div>
@@ -125,9 +138,9 @@
       <a href="https://zoziologie.raphaelnussbaumer.com/" target="_blank"><img src="images/logo_16.png"> Zoziologie. </a> <a href="mailto:rafnuss@gmail.com" target="_blank">Raphaël Nussbaumer</a>. Copyright 2020.
     </footer>-->
   </div>
-  
-  
-  
+
+
+
   <!--<button id="BiolovisionSpecieListToCsv">Biolovision To CSV</button>-->
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -137,4 +150,5 @@
   <script src="js/popup.js"></script>
   <script src="js/leaflet.markercluster.js"></script>
 </body>
+
 </html>

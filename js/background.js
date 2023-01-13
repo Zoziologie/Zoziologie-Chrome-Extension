@@ -4,28 +4,28 @@
 
 'use strict';
 
-chrome.runtime.onInstalled.addListener(function() {
+chrome.runtime.onInstalled.addListener(function () {
 
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
+  chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [
         new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {queryContains: 'sp_FChoice=synth'},
+          pageUrl: { queryContains: 'sp_FChoice=synth' },
         }),
         new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {queryContains: 'sp_FChoice=species'},
+          pageUrl: { queryContains: 'sp_FChoice=species' },
         }),
         new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {queryContains: 'm_id=8'},
+          pageUrl: { queryContains: 'm_id=8' },
         }),
         new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {urlContains: 'ebird.org/targets'},
+          pageUrl: { urlContains: 'ebird.org/targets' },
         }),
         new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {urlContains: 'ebird.org/checklist'},
+          pageUrl: { urlContains: 'ebird.org/checklist' },
         })
       ],
-      
+
       actions: [new chrome.declarativeContent.ShowPageAction()]
     }]);
   });
