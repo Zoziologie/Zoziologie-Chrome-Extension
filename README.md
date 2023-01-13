@@ -16,18 +16,18 @@ Click on the blue button **eBirdtoCSV** to create a [comma-separated value (CSV)
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 1  | Collared Dove   | Streptopelia decaocto  | 11.12%  | <https://ebird.org/map/brant?gp=true&amp;yr=all&amp;env.minX=-5.144&amp;env.minY=41.334&amp;env.maxX=9.56&amp;env.maxY=51.093>
 
-![Export of Target list](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/ExportTargetList.PNG?raw=true)
+![Export of Target list](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/ExportTargetList.PNG?raw=true)
 
 ### Anchor Link
 
 To share a specific sighting within your list, click on the link icon next to the species name to copy the url of this entry on your clipboard.
-![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/Anchorpoint.png?raw=true)
+![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/Anchorpoint.png?raw=true)
 For instance, clicking on the link icon of Madagascar Pratincole will copy the url of the checklist with "#madpra1" at the end, linking to this exact position of this entry on the page.
 
 ### Download Pictures
 
 Download any photos on the Macaulaylibrary at 2400px wide resolution (the original is only available for the author). The link **Download 2400** is available on all pages.
-![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/Download2400.PNG?raw=true)
+![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/Download2400.PNG?raw=true)
 
 ## Biolovision
 
@@ -41,9 +41,9 @@ Create CSV files from Biolovision **Specie List** (`m_id=94`) pages. This output
 
 \* only in full table.
 
-![Selection of summary](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/search-engine-formating-2.PNG?raw=true)
+![Selection of summary](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/search-engine-formating-2.PNG?raw=true)
 
-![Export of species list](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/SpeciesListoCSV.PNG?raw=true)
+![Export of species list](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/SpeciesListoCSV.PNG?raw=true)
 
 ### Convert Summary to CSV
 
@@ -55,16 +55,16 @@ Create CSV files from Biolovision **Summary** (`m_id=32`) pages. This output pag
 
 \* only in full table.
 
-![Selection of species list](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/search-engine-formating.PNG?raw=true)
+![Selection of species list](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/search-engine-formating.PNG?raw=true)
 
-![Export of summary](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/SummarytoCSV.PNG?raw=true)
+![Export of summary](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/SummarytoCSV.PNG?raw=true)
 
 ### Query coordinates
 
 Use the button "Draw Rectangle on Map" to search only sightings within the rectangle drawn. The coordinates of the rectangle are automatically injected into your webpage under "Only within the following rectangle (W / S and E / N) : ". Note that `ornitho.ch` uses Swiss coordinates, but other websites use degree.
-![QueryCoordinate](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/QueryCoordinates.PNG?raw=true)
+![QueryCoordinate](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/QueryCoordinates.PNG?raw=true)
 
 ### Query Season around Now
 
 `[+/-xd]` search for sightings reported every year between -x days from today to +x days from now. The code automatically injects the correct day and month under `Beginning of the season :`
-![QueryCoordinate](https://github.com/Zoziologie/Chrome-Extension/blob/master/images/QueryDate.PNG?raw=true)
+![QueryCoordinate](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/QueryDate.PNG?raw=true)
