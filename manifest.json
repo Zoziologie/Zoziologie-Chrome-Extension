@@ -72,7 +72,7 @@
         "*://www.faune-guyane.fr/*"
       ],
       "js": [
-        "js/jquery-3.5.1.min.js",
+        "js/jquery-3.6.3.min.js",
         "js/biolovision.js"
       ]
     },
@@ -81,7 +81,7 @@
         "*://eBird.org/targets*"
       ],
       "js": [
-        "js/jquery-3.5.1.min.js",
+        "js/jquery-3.6.3.min.js",
         "js/eBird-target.js"
       ]
     },
