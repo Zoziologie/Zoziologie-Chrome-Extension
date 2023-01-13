@@ -35,11 +35,10 @@ Download any photos on the Macaulaylibrary at 2400px wide resolution (the origin
 
 Create CSV files from Biolovision **Specie List** (`m_id=94`) pages. This output page is selected on the last tab of the **search engine** page (`?m_id=8`). The exported table contains the following columns:
 
-| `number` | `common_name` | `scientific_name` | `latest_date`* | `breeding`* | `link_observation`* | `link_stat`* | `link_info`* |
+| `number` | `common_name` | `scientific_name` | `latest_date` | `breeding` | `link_observation` | `link_stat` | `link_info` |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 31 | Greylag Goose | Anser anser | 06.01.2020 | certain | <https://www.ornitho.ch/index.php?m_id=94&showback=stor&p_c=5&p_cc=-1&sp_tg=1&sp_DateSynth=02.06.2020&sp_DChoice=offset&sp_DOffset=5&sp_SChoice=species&sp_S=60&sp_PChoice=canton&sp_cC=000100110000000000000011001001100000000000000000000&sp_FChoice=list&sp_FDisplay=DATE_PLACE_SPECIES&sp_DFormat=DESC>  | <https://www.ornitho.ch/index.php?m_id=81&frmSpecies=60&sp_tg=1&showback=stor> | <https://www.ornitho.ch/index.php?m_id=15&showback=stor&backlink=skip&frmSpecies=60&sp_tg=1>
 
-\* only in full table.
 
 ![Selection of summary](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/search-engine-formating-2.PNG?raw=true)
 
@@ -49,22 +48,12 @@ Create CSV files from Biolovision **Specie List** (`m_id=94`) pages. This output
 
 Create CSV files from Biolovision **Summary** (`m_id=32`) pages. This output page is selected on the last tab of the **search engine** page (`?m_id=8`). The exported table contains the following column:
 
-| `number` | `common_name` | `observers`* | `places`* | `link_observations`* | `link_stat`* | `link_info`* | `photo`* |
+| `number` | `common_name` | `observers` | `places` | `link_observations` | `link_stat` | `link_info` | `photo` |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | ~40 | Greylag Geese | 2 Observers | 2 places | <https://www.ornitho.ch/index.php?m_id=94&showback=stor&p_c=5&p_cc=-1&sp_tg=1&sp_DateSynth=01.06.2020&sp_DChoice=range&sp_DFrom=01.06.2020&sp_DTo=01.06.2020&sp_SChoice=species&sp_S=60&sp_PChoice=canton&sp_cC=000100110000000000000011001001100000000000000000000&sp_FChoice=list&sp_FDisplay=DATE_PLACE_SPECIES&sp_DFormat=DESC> | <https://www.ornitho.ch/index.php?m_id=81&frmSpecies=60&showback=stor&cDate=2020-06-01> | <https://www.ornitho.ch/index.php?m_id=15&showback=stor&backlink=skip&y=2020&frmSpecies=60&sp_tg=1>
 
-\* only in full table.
+
 
 ![Selection of species list](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/search-engine-formating.PNG?raw=true)
 
 ![Export of summary](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/SummarytoCSV.PNG?raw=true)
-
-### Query coordinates
-
-Use the button "Draw Rectangle on Map" to search only sightings within the rectangle drawn. The coordinates of the rectangle are automatically injected into your webpage under "Only within the following rectangle (W / S and E / N) : ". Note that `ornitho.ch` uses Swiss coordinates, but other websites use degree.
-![QueryCoordinate](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/QueryCoordinates.PNG?raw=true)
-
-### Query Season around Now
-
-`[+/-xd]` search for sightings reported every year between -x days from today to +x days from now. The code automatically injects the correct day and month under `Beginning of the season :`
-![QueryCoordinate](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/QueryDate.PNG?raw=true)
