@@ -2,10 +2,7 @@
   "name": "Zoziologie",
   "version": "1.0",
   "description": "Toolkit for web-birding",
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ],
+  "permissions": [],
   "action": {
     "default_icon": {
       "16": "logo/logo_16.png",
@@ -65,7 +62,7 @@
         "*://www.faune-guyane.fr/*"
       ],
       "js": [
-        "biolovision.js"
+        "js/biolovision.js"
       ]
     },
     {
@@ -73,7 +70,7 @@
         "*://eBird.org/targets*"
       ],
       "js": [
-        "eBird-target.js"
+        "js/eBird-target.js"
       ]
     },
     {
@@ -81,7 +78,7 @@
         "*://eBird.org/checklist*"
       ],
       "js": [
-        "eBird-checklist.js"
+        "js/eBird-checklist.js"
       ]
     },
     {
@@ -89,7 +86,7 @@
         "*://macaulaylibrary.org/asset*"
       ],
       "js": [
-        "macaulaylibrary.js"
+        "js/macaulaylibrary.js"
       ]
     }
   ],
