@@ -2,6 +2,17 @@
 
 A set of tools to make your lifer easier on eBird and Biolovision (ornitho, faune-...)
 
+- [eBird](#ebird)
+  * [1. Generate Target List for personal locations](#1-generate-target-list-for-personal-locations)
+  * [2. Convert Target List to CSV](#2-convert-target-list-to-csv)
+  * [3. Anchor Link](#3-anchor-link)
+  * [4. Download Pictures](#4-download-pictures)
+  * [5. Export tripreport list](#5-export-tripreport-list)
+- [Biolovision](#biolovision)
+  * [1. Convert Species List to CSV](#1-convert-species-list-to-csv)
+  * [2. Convert Summary to CSV](#2-convert-summary-to-csv)
+
+
 ## eBird
 
 ### 1. Generate Target List for personal locations
