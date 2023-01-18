@@ -1,12 +1,12 @@
 # Zoziologie Chrome Extension
 
-A toolkit for web-birding on eBird and Biolovision (ornitho, faune-...)
+A set of tools to make your lifer easier on eBird and Biolovision (ornitho, faune-...)
 
 ## eBird
 
 ### 1. Generate Target List for personal locations
 
-**Currently not available**
+*Currently not available*
 
 ~~By default, eBird only allows to build target lists at country or region level. However, the internal process is able to compute a target list for any location. With this plug-in, you can generate a target list for any of [your personal locations](https://ebird.org/MyEBird?cmd=manageLocations). Go to [ebird.org/targets](https://ebird.org/targets), click on the extension icon, and type the name of the location you want to generate a list for (case and accent sensitive) and the location will be updated upon selection.~~
 
@@ -32,6 +32,11 @@ For instance, clicking on the link icon of Madagascar Pratincole will copy the u
 
 Download any photos on the Macaulaylibrary at 2400px wide resolution (the original is only available for the author). The link **Download 2400** is available on all pages.
 ![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/Download2400.PNG?raw=true)
+
+
+### 5. Export tripreport list
+
+*Coming soon*
 
 ## Biolovision
 
