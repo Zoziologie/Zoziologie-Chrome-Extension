@@ -2,16 +2,23 @@
 
 A set of tools to make your lifer easier on eBird and Biolovision (ornitho, faune-...)
 
-- [Zoziologie Chrome Extension](#zoziologie-chrome-extension)
-  - [eBird](#ebird)
-    - [1. Generate Target List for personal locations](#1-generate-target-list-for-personal-locations)
-    - [2. Convert Target List to CSV](#2-convert-target-list-to-csv)
-    - [3. Anchor Link](#3-anchor-link)
-    - [4. Download Pictures](#4-download-pictures)
-    - [5. Export tripreport list](#5-export-tripreport-list)
-  - [Biolovision](#biolovision)
-    - [1. Convert Species List to CSV](#1-convert-species-list-to-csv)
-    - [2. Convert Summary to CSV](#2-convert-summary-to-csv)
+- [How to install?](#how-to-install)
+- [eBird](#ebird)
+  - [1. Generate Target List for personal locations](#1-generate-target-list-for-personal-locations)
+  - [2. Convert Target List to CSV](#2-convert-target-list-to-csv)
+  - [3. Anchor Link](#3-anchor-link)
+  - [4. Download Pictures](#4-download-pictures)
+  - [5. Export tripreport list](#5-export-tripreport-list)
+- [Biolovision](#biolovision)
+  - [1. Convert Species List to CSV](#1-convert-species-list-to-csv)
+  - [2. Convert Summary to CSV](#2-convert-summary-to-csv)
+
+## How to install?
+
+You can now directly install the extension from the [chrome web store]([Zoziologie](https://chrome.google.com/webstore/detail/zoziologie/ikoemgmlmapdnjkphgficpdlkfiepodh))!
+
+[![image](https://user-images.githubusercontent.com/7571260/213334689-48582f00-4a24-46b6-a56f-3b1b230cb456.png)](https://chrome.google.com/webstore/detail/zoziologie/ikoemgmlmapdnjkphgficpdlkfiepodh)
+
 
 ## eBird
 
