@@ -1,12 +1,12 @@
 document.querySelectorAll('.Observation').forEach(function (e) {
-  e.
-    insertAdjacentHTML('beforeend', `
-  <div>
-  <a class="zoziology-ebird-link" value="${e.id}">
-						<svg class="Icon Icon--link Icon--sm" role="presentation"><use xlink:href="#Icon--link"></use></svg>
-						<span class="is-visuallyHidden">Copy link</span>
-					</a>
-          </div>`)
+  e.getElementsByClassName("Observation-species")[0].
+    insertAdjacentHTML("afterend", `
+      <div style="grid-column: 5/6;">
+        <a class="zoziology-ebird-link" value="${e.id}">
+					<svg class="Icon Icon--link Icon--sm" role="presentation"><use xlink:href="#Icon--link"></use></svg>
+					<span class="is-visuallyHidden">Copy link</span>
+				</a>
+      </div>`)
 });
 
 document.addEventListener("click", function (e) {
