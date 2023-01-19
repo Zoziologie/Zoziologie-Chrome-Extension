@@ -10,7 +10,7 @@ document.querySelectorAll('.Observation').forEach(function (e) {
 });
 
 var els = document.querySelectorAll("a[href='#tracks-info-panel']");
-if (els) {
+if (els.length > 0) {
   els[0].
     insertAdjacentHTML("afterend", `
   <a id="zoziology-ebird-gps" class="Button Button--tiny Button--hollow u-margin-none u-showForMedium" style="padding: .25rem .4rem;" href="#">
