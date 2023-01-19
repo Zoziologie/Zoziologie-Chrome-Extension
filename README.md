@@ -51,6 +51,8 @@ Export tripreport to csv.
 | -------------- | -------------- | ----------------- | ------- | ------------ | ------- |
 | ostric2        | Common Ostrich | Struthio camelus  | 16      | 1            | 0       |
 
+![image](https://user-images.githubusercontent.com/7571260/213334229-14c52291-4a8e-41f9-b1a4-ab05f33336ee.png)
+
 ## Biolovision
 
 ### 1. Convert Species List to CSV
