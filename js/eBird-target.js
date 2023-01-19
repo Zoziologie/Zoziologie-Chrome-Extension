@@ -20,8 +20,13 @@ document.addEventListener("click", function (e) {
     Array.from(document.getElementsByClassName('ResultsStats')).forEach(function (res) {
       var d = [];
       d.push(res.getElementsByClassName('ResultsStats-index')[0].innerHTML.split('.')[0]); // rank
-      d.push(res.getElementsByClassName('SpecimenHeader-joined')[0].getElementsByTagName('a')[0].innerHTML.split('<em')[0].replace(/\r?\n|\r/g, '').replace(/\t/g, '')); //name
-      d.push(res.getElementsByClassName('SpecimenHeader-joined')[0].getElementsByTagName('a')[0].getElementsByTagName('em')[0].innerText); //latin
+      const name = res.getElementsByClassName('SpecimenHeader-joined')[0].getElementsByTagName('a')[0]
+      d.push(name.innerHTML.split('<em')[0].replace(/\r?\n|\r/g, '').replace(/\t/g, '')); //name
+      if (name.getElementsByTagName('em').length > 0) {
+        d.push(name.getElementsByTagName('em')[0].innerText); //latin
+      } else {
+        d.push("");
+      }
       d.push(res.getElementsByClassName('StatsIcon-stat-count')[0].innerHTML); //
       d.push('https://ebird.org/' + res.getElementsByClassName('ResultsStats-action')[0].innerHTML.split('href="')[1].split('"')[0]); // map
       data.push(d)
