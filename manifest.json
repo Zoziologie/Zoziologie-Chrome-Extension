@@ -1,6 +1,6 @@
 {
   "name": "Zoziologie",
-  "version": "2.2",
+  "version": "2.3",
   "description": "Toolkit for web-birding",
   "permissions": [],
   "action": {
@@ -95,6 +95,14 @@
       ],
       "js": [
         "js/eBird-tripreport.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://eBird.org/mylocations/edit/*"
+      ],
+      "js": [
+        "js/eBird-mylocation.js"
       ]
     }
   ],
