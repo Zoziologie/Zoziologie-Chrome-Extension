@@ -1,12 +1,8 @@
 
-const detail_btn = document.querySelector('.ReportList-heading > button')
-console.log(detail_btn)
+const detail_btn = document.querySelector('.ReportMetaTools')
 if (detail_btn) {
-    detail_btn.insertAdjacentHTML('beforeBegin', `
-<a href="#" class="Button Button--small Button--hollow" style="margin-left: 4px; margin-bottom: 0;" id="zoziology-target2csv">
-  <svg class="Icon Icon--download u-inline-xs" role="presentation"><use xlink:href="#Icon--download"></use></svg>
-  <span class="u-showForMedium">Download (csv)</span>
-</a>`)
+    detail_btn.insertAdjacentHTML('beforeEnd', `<button class="Button Button--reverse Button--small Button--hollow" id="zoziology-target2csv"><svg class="Icon Icon--download u-inline-xs" role="presentation"><use xlink:href="#Icon--download"></use></svg>
+    <span class="u-showForMedium">Download (csv)</span></button>`)
 }
 
 document.addEventListener("click", function (e) {
