@@ -112,6 +112,14 @@
       "js": [
         "js/eBird-barchart.js"
       ]
+    },
+    {
+      "matches": [
+        "*://ebird.org/region*"
+      ],
+      "js": [
+        "js/eBird-region.js"
+      ]
     }
   ],
   "icons": {
