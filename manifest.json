@@ -104,6 +104,14 @@
       "js": [
         "js/eBird-mylocation.js"
       ]
+    },
+    {
+      "matches": [
+        "*://ebird.org/barchart*"
+      ],
+      "js": [
+        "js/eBird-barchart.js"
+      ]
     }
   ],
   "icons": {

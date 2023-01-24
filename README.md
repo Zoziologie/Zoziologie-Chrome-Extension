@@ -2,33 +2,30 @@
 
 A set of tools to make your lifer easier on eBird and Biolovision (ornitho, faune-...)
 
-- [How to install?](#how-to-install)
-- [eBird](#ebird)
-  - [1. Generate Target List for personal locations](#1-generate-target-list-for-personal-locations)
-  - [2. Convert Target List to CSV](#2-convert-target-list-to-csv)
-  - [3. Anchor Link](#3-anchor-link)
-  - [4. Download Pictures](#4-download-pictures)
-  - [5. Export tripreport list](#5-export-tripreport-list)
-- [Biolovision](#biolovision)
-  - [1. Convert Species List to CSV](#1-convert-species-list-to-csv)
-  - [2. Convert Summary to CSV](#2-convert-summary-to-csv)
+- [Zoziologie Chrome Extension](#zoziologie-chrome-extension)
+  - [How to install?](#how-to-install)
+  - [eBird](#ebird)
+    - [1. Convert Target to CSV](#1-convert-target-to-csv)
+    - [5. Export Tripreport](#5-export-tripreport)
+    - [5. Export Barchart](#5-export-barchart)
+    - [3. Anchor Link](#3-anchor-link)
+    - [4. Download Pictures](#4-download-pictures)
+    - [1. Link to target List from personal locations](#1-link-to-target-list-from-personal-locations)
+    - [1. Link to target List from personal locations](#1-link-to-target-list-from-personal-locations-1)
+    - [1. Link to target List from personal locations](#1-link-to-target-list-from-personal-locations-2)
+  - [Biolovision](#biolovision)
+    - [1. Convert Species List to CSV](#1-convert-species-list-to-csv)
+    - [2. Convert Summary to CSV](#2-convert-summary-to-csv)
 
 ## How to install?
 
-You can now directly install the extension from the [chrome web store]([Zoziologie](https://chrome.google.com/webstore/detail/zoziologie/ikoemgmlmapdnjkphgficpdlkfiepodh))!
+You can now directly install the extension from the [chrome web store](<[Zoziologie](https://chrome.google.com/webstore/detail/zoziologie/ikoemgmlmapdnjkphgficpdlkfiepodh)>)!
 
 [![image](https://user-images.githubusercontent.com/7571260/213334689-48582f00-4a24-46b6-a56f-3b1b230cb456.png)](https://chrome.google.com/webstore/detail/zoziologie/ikoemgmlmapdnjkphgficpdlkfiepodh)
 
-
 ## eBird
 
-### 1. Generate Target List for personal locations
-
-_Currently not available_
-
-~~By default, eBird only allows to build target lists at country or region level. However, the internal process is able to compute a target list for any location. With this plug-in, you can generate a target list for any of [your personal locations](https://ebird.org/MyEBird?cmd=manageLocations). Go to [ebird.org/targets](https://ebird.org/targets), click on the extension icon, and type the name of the location you want to generate a list for (case and accent sensitive) and the location will be updated upon selection.~~
-
-### 2. Convert Target List to CSV
+### 1. Convert Target to CSV
 
 Export your [Target](https://ebird.org/targets) list into a [comma-separated value (csv)](https://en.wikipedia.org/wiki/Comma-separated_values) using the new button "Download (csv)" next to "Print". The exported table contains the following columns:
 
@@ -37,6 +34,23 @@ Export your [Target](https://ebird.org/targets) list into a [comma-separated val
 | 1      | Collared Dove | Streptopelia decaocto | 11.12%      | <https://ebird.org/map/brant?gp=true&yr=all&env.minX=-5.144&env.minY=41.334&env.maxX=9.56&env.maxY=51.093> |
 
 ![image](https://user-images.githubusercontent.com/7571260/213308310-d0cbc49d-79cb-4370-91c4-55044cfd9b2a.png)
+
+### 5. Export Tripreport
+
+| `species_code` | `common_name`  | `scientific_name` | `count` | `checklists` | `media` |
+| -------------- | -------------- | ----------------- | ------- | ------------ | ------- |
+| ostric2        | Common Ostrich | Struthio camelus  | 16      | 1            | 0       |
+
+![image](https://user-images.githubusercontent.com/7571260/213334229-14c52291-4a8e-41f9-b1a4-ab05f33336ee.png)
+
+### 5. Export Barchart
+
+Export barchart into a csv. First row is the normalization (i.e., number of checklists for that periods). There are always 48 periods, 4 per months.
+
+| `species_code` | `common_name`  | `scientific_name` | `Jan1` | `Jan2` | `...` | `Dec4` |
+| -------------- | -------------- | ----------------- | ------ | ------ | ----- | ------ |
+|                |                |                   | 16     | 4      | 24    | 4      |
+| ostric2        | Common Ostrich | Struthio camelus  | 1      | 1      | 15    | 0      |
 
 ### 3. Anchor Link
 
@@ -50,15 +64,11 @@ For instance, clicking on the link icon of Madagascar Pratincole will copy the u
 Download any photos on the Macaulaylibrary at 2400px wide resolution (the original is only available for the author). The link **Download 2400** is available on all pages.
 ![Anchorlink](https://github.com/Zoziologie/Chrome-Extension/blob/master/assets/Download2400.PNG?raw=true)
 
-### 5. Export tripreport list
+### 1. Link to target List from personal locations
 
-Export tripreport to csv.
+### 1. Link to target List from personal locations
 
-| `species_code` | `common_name`  | `scientific_name` | `count` | `checklists` | `media` |
-| -------------- | -------------- | ----------------- | ------- | ------------ | ------- |
-| ostric2        | Common Ostrich | Struthio camelus  | 16      | 1            | 0       |
-
-![image](https://user-images.githubusercontent.com/7571260/213334229-14c52291-4a8e-41f9-b1a4-ab05f33336ee.png)
+### 1. Link to target List from personal locations
 
 ## Biolovision
 
