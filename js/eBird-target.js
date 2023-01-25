@@ -12,34 +12,30 @@ if (print_btn) {
 document.addEventListener("click", function (e) {
   const target = e.target.closest("#zoziology-target2csv");
   if (target) {
-    const filename = window.location.href.split("?")[1]
-    var data = [];
-    // Add header
-    data.push(['rank', 'common_name', 'scientific_name', 'frequency', 'link_map'])
-    // Add column
-    Array.from(document.getElementsByClassName('ResultsStats')).forEach(function (res) {
-      var d = [];
-      d.push(res.getElementsByClassName('ResultsStats-index')[0].innerHTML.split('.')[0]); // rank
-      const name = res.getElementsByClassName('SpecimenHeader-joined')[0].getElementsByTagName('a')[0]
-      d.push(name.innerHTML.split('<em')[0].replace(/\r?\n|\r/g, '').replace(/\t/g, '')); //name
-      if (name.getElementsByTagName('em').length > 0) {
-        d.push(name.getElementsByTagName('em')[0].innerText); //latin
-      } else {
-        d.push("");
-      }
-      d.push(res.getElementsByClassName('StatsIcon-stat-count')[0].innerHTML); //
-      d.push('https://ebird.org/' + res.getElementsByClassName('ResultsStats-action')[0].innerHTML.split('href="')[1].split('"')[0]); // map
-      data.push(d)
-    });
+    const category = ["native-and-naturalized", "exotic-provisional", "exotic-escapee", "hybrids"];
+    const data = category.map((cat) => {
+      return Array.from(document.querySelectorAll('[aria-labelledby="' + cat + '"] ol li')).map((res) => {
+        return {
+          rank: res.querySelector('.ResultsStats-index span') ? res.querySelector('.ResultsStats-index span').innerText.split('.')[0] : "",
+          species_code: res.querySelector('.ResultsStats-action a').href.split("/map/")[1].split("?")[0],
+          common_name: res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a")).innerHTML.replace(/\r?\n|\r/g, '').replace(/\t/g, '').split(' <em')[0],
+          scientific_name: res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a") + " em") ? res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a") + " em").innerText : "",
+          frequency: res.querySelector('.StatsIcon-stat-count').innerText,
+          category: res.querySelector(".ResultsStats-title button") ? res.querySelector(".ResultsStats-title button").title.split("Exotic: ")[1] : "Native"
+        }
+      })
+    }).flat()
+
 
     if (data.length > 1) {
-      var csvContent = "data:text/csv;charset=utf-8,";
-      data.forEach(function (d) {
-        csvContent += d.join(",") + "\n";
-      });
+      const array = [Object.keys(data[0])].concat(data).map(it => {
+        return Object.values(it).toString()
+      }).join('\n')
+      var csvContent = "data:text/csv;charset=utf-8," + array;
       var encodedUri = encodeURI(csvContent);
       var link = document.createElement("a");
       link.setAttribute("href", encodedUri);
+      const filename = window.location.href.split("?")[1]
       link.setAttribute("download", filename + '.csv');
       link.click();
     } else {
