@@ -6,8 +6,7 @@ if (detail_btn) {
 }
 
 const week = ["Jan1", "Jan2", "Jan3", "Jan4", "Feb1", "Feb2", "Feb3", "Feb4", "Mar1", "Mar2", "Mar3", "Mar4", "Apr1", "Apr2", "Apr3", "Apr4", "May1", "May2", "May3", "May4", "Jun1", "Jun2", "Jun3", "Jun4", "Jul1", "Jul2", "Jul3", "Jul4", "Aug1", "Aug2", "Aug3", "Aug4", "Sept1", "Sept2", "Sept3", "Sept4", "Oct1", "Oct2", "Oct3", "Oct4", "Nov1", "Nov2", "Nov3", "Nov4", "Dec1", "Dec2", "Dec3", "Dec4"];
-const header = ["speciesCode", "commonName", "sciName"];
-const header_new = ["species_code", "common_name", "scientific_name"];
+const header = ["speciesCode", "category", "commonName", "sciName", "exoticCategory"];
 
 document.addEventListener("click", function (e) {
     const target = e.target.closest("#zoziology-barchart");
@@ -16,12 +15,16 @@ document.addEventListener("click", function (e) {
         const filename = "barchartData_" + window.location.href.split("?")[1]
         fetch(url).then((response) => response.json())
             .then((data) => {
+                console.log(data)
                 if (data.dataRows.length > 1) {
                     var json = data.dataRows.map(r => {
-                        return { ...r.values.reduce((a, v, i) => ({ ...a, [week[i]]: v }), {}), ...header.reduce((a, v, i) => ({ ...a, [header_new[i]]: r.taxon[v] }), {}) };
+                        const values = r.values.reduce((a, v, i) => ({ ...a, [week[i]]: v }), {});
+                        r.taxon.exoticCategory = r.exoticCategory || "";
+                        const species_info = header.reduce((a, v) => ({ ...a, [v]: r.taxon[v] }), {})
+                        return { ...values, ...species_info };
                     })
-                    json.unshift({ ...data.dataRows[0].values_N.reduce((a, v, i) => ({ ...a, [week[i]]: v }), {}), ...header.reduce((a, v, i) => ({ ...a, [header_new[i]]: "" }), {}) })
-                    var fields = [...header_new, ...week];
+                    json.unshift({ ...data.dataRows[0].values_N.reduce((a, v, i) => ({ ...a, [week[i]]: v }), {}), ...header.reduce((a, v) => ({ ...a, [v]: "" }), {}) })
+                    var fields = [...header, ...week];
                     var replacer = function (key, value) { return value === null ? '' : value }
                     var csv = json.map(function (row) {
                         return fields.map(function (fieldName) {

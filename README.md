@@ -50,10 +50,10 @@ Export a [barchart](https://ebird.org/barchart) data into a csv using the new bu
 
 First row is the normalization factor (i.e., number of checklists). There are 48 periods: 4 per months.
 
-| `species_code` | `common_name`  | `scientific_name` | `Jan1` | `Jan2` | `...` | `Dec4` |
-| -------------- | -------------- | ----------------- | ------ | ------ | ----- | ------ |
-|                |                |                   | 16     | 4      | 24    | 4      |
-| ostric2        | Common Ostrich | Struthio camelus  | 1      | 1      | 15    | 0      |
+| `speciesCode` | `category` | `commonName`     | `sciName`     | `exoticCategory` | `1-Jan` | `2-Jan` | `...` | `4-Dec` |
+| ------------- | ---------- | ---------------- | ------------- | ---------------- | ------- | ------- | ----- | ------- |
+|               |            |                  |               |                  | 247     | 259     | ...   | 257     |
+| bahgoo        | species    | Bar-headed Goose | Anser indicus | N                | 0       | 0       | ...   | 0       |
 
 ![image](assets/barchart.png)
 
