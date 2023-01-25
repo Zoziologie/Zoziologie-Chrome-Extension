@@ -38,9 +38,9 @@ Export your [Target](https://ebird.org/targets) list into a [comma-separated val
 
 Export your species list of a [trip report](https://ebird.org/targets) into a csv using the new button "Download (csv)" next to share and edit.
 
-| `species_code` | `common_name`  | `scientific_name` | `count` | `checklists` | `media` |
-| -------------- | -------------- | ----------------- | ------- | ------------ | ------- |
-| ostric2        | Common Ostrich | Struthio camelus  | 16      | 1            | 0       |
+| `speciesCode` | `category` | `commonName`               | `sciName`           | `numIndividuals` | `numChecklists` | `numPhotos` | `numAudio` | `numVideo` | `isLifer` | `numMedia` | `exoticCategory` |
+| ------------- | ---------- | -------------------------- | ------------------- | ---------------- | --------------- | ----------- | ---------- | ---------- | --------- | ---------- | ---------------- |
+| wfwduc1       | species    | White-faced Whistling-Duck | Dendrocygna viduata | 250              | 2               | 0           | 0          | 0          | FALSE     | 0          |                  |
 
 ![image](assets/tripreport.png)
 

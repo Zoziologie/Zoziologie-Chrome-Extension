@@ -8,39 +8,27 @@ if (detail_btn) {
 document.addEventListener("click", function (e) {
     const target = e.target.closest("#zoziology-target2csv");
     if (target) {
-        const filename = document.querySelector(".ReportTitle-name").innerText.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-        var data = [];
-        // Add header
-        data.push(['species_code', 'common_name', 'scientific_name', 'count', 'checklists', 'media'])
-        // Add column
-        Array.from(document.getElementsByClassName('ReportListSpecies')).forEach(function (res) {
-            var d = [];
-            d.push(res.id)
-            d.push(res.getElementsByClassName('Species-common')[0].innerText); //name
-            d.push(res.getElementsByClassName('Species-sci')[0].innerText); //latin
-            d.push(res.getElementsByClassName('ReportListSpecies-count')[0].innerText); // rank
-            const info = Array.from(res.getElementsByClassName('ReportListSpecies-metaSummary-items-item')).reduce((obj, e) => {
-                const tmp = e.innerText.split("\n")
-                obj[tmp[0]] = tmp[1]
-                return obj
-            }, { Media: 0, Checklists: null })
-            d.push(info.Checklists);
-            d.push(info.Media);
-            data.push(d)
-        });
-
-        if (data.length > 1) {
-            var csvContent = "data:text/csv;charset=utf-8,";
-            data.forEach(function (d) {
-                csvContent += d.join(",") + "\n";
+        fetch("https://ebird.org/tripreport-internal/v1/taxon-list/" + window.location.pathname.split("tripreport/")[1])
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.length > 1) {
+                    const data_c = data.map(e => {
+                        e.exoticCategory = e.exoticCategory || "";
+                        return e
+                    })
+                    const header = Object.keys(data_c[0]);
+                    const array = data_c.map(it => header.map(h => it[h].toString()))
+                    array.unshift(header)
+                    var csvContent = "data:text/csv;charset=utf-8," + array.join('\n');
+                    var encodedUri = encodeURI(csvContent);
+                    var link = document.createElement("a");
+                    link.setAttribute("href", encodedUri);
+                    const filename = document.querySelector(".ReportTitle-name").innerText.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                    link.setAttribute("download", filename + '.csv');
+                    link.click();
+                } else {
+                    alert("No data to download. Make sure the targets list is displayed")
+                }
             });
-            var encodedUri = encodeURI(csvContent);
-            var link = document.createElement("a");
-            link.setAttribute("href", encodedUri);
-            link.setAttribute("download", filename + '.csv');
-            link.click();
-        } else {
-            alert("No data to download. Make sure the targets list is displayed")
-        }
     }
 });
