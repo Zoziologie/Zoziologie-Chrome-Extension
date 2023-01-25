@@ -12,12 +12,14 @@ document.addEventListener("click", function (e) {
             .then((response) => response.json())
             .then((data) => {
                 if (data.length > 1) {
-                    const data_c = data.map(e => {
+                    data = data.map(e => {
                         e.exoticCategory = e.exoticCategory || "";
+                        e.isPhotoLifer = e.isPhotoLifer || false;
+                        e.isAudioLifer = e.isAudioLifer || false;
                         return e
                     })
-                    const header = Object.keys(data_c[0]);
-                    const array = data_c.map(it => header.map(h => it[h].toString()))
+                    const header = Object.keys(data[0]);
+                    const array = data.map(it => header.map(h => it[h].toString()))
                     array.unshift(header)
                     var csvContent = "data:text/csv;charset=utf-8," + array.join('\n');
                     var encodedUri = encodeURI(csvContent);
