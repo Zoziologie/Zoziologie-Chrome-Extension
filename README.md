@@ -1,6 +1,6 @@
 # Zoziologie Chrome Extension
 
-A set of tools to make your lifer easier on eBird and Biolovision (ornitho, faune-...)
+A set of tools to make your life easier on eBird and Biolovision (ornitho, faune-...)
 
 - [Zoziologie Chrome Extension](#zoziologie-chrome-extension)
   - [How to install?](#how-to-install)
