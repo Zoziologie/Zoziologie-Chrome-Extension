@@ -15,7 +15,6 @@ document.addEventListener("click", function (e) {
         const filename = "barchartData_" + window.location.href.split("?")[1]
         fetch(url).then((response) => response.json())
             .then((data) => {
-                console.log(data)
                 if (data.dataRows.length > 1) {
                     var json = data.dataRows.map(r => {
                         const values = r.values.reduce((a, v, i) => ({ ...a, [week[i]]: v }), {});

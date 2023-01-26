@@ -30,7 +30,7 @@ Export your [Target](https://ebird.org/targets) list into a [comma-separated val
 | ------ | ------------- | ------------ | --------------- | ----------- | ------------------- |
 | 1      | brant         | Brent Goose  | Branta bernicla | 1.77%       | Native              |
 
-\* one of `Native`, `Naturalized`, `Provisional`, `Escapee`. Note that hybrids are identifiable from common_name.
+\* one of `Native`, `Naturalized`, `Provisional`, `Escapee`. Note that hybrids are identifiable from `commonName`.
 
 ![image](assets/target.png)
 
@@ -46,7 +46,7 @@ Export your species list of a [trip report](https://ebird.org/mytripreports) int
 
 ### 3. Export Barchart
 
-Export a [barchart](https://ebird.org/barchart) data into a csv using the new button "Download (csv)" on top of the table.
+Export a [barchart](https://ebird.org/GuideMe?cmd=changeLocation) data into a csv using the new button "Download (csv)" on top of the table.
 
 First row is the normalization factor (i.e., number of checklists). There are 48 periods: 4 per months.
 
