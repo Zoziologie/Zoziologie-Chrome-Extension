@@ -67,7 +67,7 @@
     },
     {
       "matches": [
-        "*://eBird.org/**/targets*"
+        "*://eBird.org/*targets*"
       ],
       "js": [
         "js/eBird-target.js"
@@ -75,7 +75,7 @@
     },
     {
       "matches": [
-        "*://eBird.org/**/checklist*"
+        "*://eBird.org/*checklist/*"
       ],
       "js": [
         "js/eBird-checklist.js"
@@ -91,7 +91,7 @@
     },
     {
       "matches": [
-        "*://eBird.org/**/tripreport*"
+        "*://eBird.org/*tripreport/*"
       ],
       "js": [
         "js/eBird-tripreport.js"
@@ -99,7 +99,7 @@
     },
     {
       "matches": [
-        "*://eBird.org/**/mylocations/edit/*"
+        "*://eBird.org/*mylocations/edit/*"
       ],
       "js": [
         "js/eBird-mylocation.js"
@@ -107,7 +107,7 @@
     },
     {
       "matches": [
-        "*://ebird.org/**/barchart*"
+        "*://ebird.org/*barchart*"
       ],
       "js": [
         "js/eBird-barchart.js"
@@ -115,7 +115,7 @@
     },
     {
       "matches": [
-        "*://ebird.org/**/region*"
+        "*://ebird.org/*region/*"
       ],
       "js": [
         "js/eBird-region.js"
