@@ -21,6 +21,7 @@ if (els.length > 0) {
 document.addEventListener("click", function (e) {
   const target = e.target.closest(".zoziology-ebird-link");
   if (target) {
+    const text = window.location.href.split("#")[0] + "#" + target.getAttribute("value");
     if (document.querySelector('#copied')) {
       document.querySelector('#copied').remove()
     }
