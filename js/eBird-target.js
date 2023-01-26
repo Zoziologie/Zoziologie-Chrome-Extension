@@ -17,11 +17,11 @@ document.addEventListener("click", function (e) {
       return Array.from(document.querySelectorAll('[aria-labelledby="' + cat + '"] ol li')).map((res) => {
         return {
           rank: res.querySelector('.ResultsStats-index span') ? res.querySelector('.ResultsStats-index span').innerText.split('.')[0] : "",
-          species_code: res.querySelector('.ResultsStats-action a').href.split("/map/")[1].split("?")[0],
-          common_name: res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a")).innerHTML.replace(/\r?\n|\r/g, '').replace(/\t/g, '').split(' <em')[0],
-          scientific_name: res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a") + " em") ? res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a") + " em").innerText : "",
+          speciesCode: res.querySelector('.ResultsStats-action a').href.split("/map/")[1].split("?")[0],
+          commonName: res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a")).innerHTML.replace(/\r?\n|\r/g, '').replace(/\t/g, '').split(' <em')[0],
+          sciName: res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a") + " em") ? res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a") + " em").innerText : "",
           frequency: res.querySelector('.StatsIcon-stat-count').innerText,
-          category: res.querySelector(".ResultsStats-title button") ? res.querySelector(".ResultsStats-title button").title.split("Exotic: ")[1] : "Native"
+          exoticCategory: res.querySelector(".ResultsStats-title button") ? res.querySelector(".ResultsStats-title button").title.split("Exotic: ")[1] : "Native"
         }
       })
     }).flat()

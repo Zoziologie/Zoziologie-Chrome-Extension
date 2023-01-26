@@ -26,9 +26,9 @@ Install the extension directly from the [chrome web store](<[Zoziologie](https:/
 
 Export your [Target](https://ebird.org/targets) list into a [comma-separated value (csv)](https://en.wikipedia.org/wiki/Comma-separated_values) using the new button "Download (csv)" next to "Print". The exported table contains the following columns:
 
-| `rank` | `species_code` | `common_name` | `scientific_name` | `frequency` | `category` \* |
-| ------ | -------------- | ------------- | ----------------- | ----------- | ------------- |
-| 1      | brant          | Brent Goose   | Branta bernicla   | 1.77%       | Native        |
+| `rank` | `speciesCode` | `commonName` | `sciName`       | `frequency` | `exoticCategory` \* |
+| ------ | ------------- | ------------ | --------------- | ----------- | ------------------- |
+| 1      | brant         | Brent Goose  | Branta bernicla | 1.77%       | Native              |
 
 \* one of `Native`, `Naturalized`, `Provisional`, `Escapee`. Note that hybrids are identifiable from common_name.
 
@@ -36,7 +36,7 @@ Export your [Target](https://ebird.org/targets) list into a [comma-separated val
 
 ### 2. Export Trip report
 
-Export your species list of a [trip report](https://ebird.org/targets) into a csv using the new button "Download (csv)" next to share and edit.
+Export your species list of a [trip report](https://ebird.org/mytripreports) into a csv using the new button "Download (csv)" next to share and edit.
 
 | `speciesCode` | `category` | `commonName`               | `sciName`           | `numIndividuals` | `numChecklists` | `numPhotos` | `numAudio` | `numVideo` | `isLifer` | `numMedia` | `exoticCategory` |
 | ------------- | ---------- | -------------------------- | ------------------- | ---------------- | --------------- | ----------- | ---------- | ---------- | --------- | ---------- | ---------------- |
