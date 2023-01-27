@@ -9,9 +9,9 @@ document.querySelectorAll('.Observation').forEach(function (e) {
       </div>`)
 });
 
-var els = document.querySelectorAll("a[href='#tracks-info-panel']");
-if (els.length > 0) {
-  els[0].
+var els = document.querySelector("a[href='#tracks-info-panel']");
+if (els.length) {
+  els.
     insertAdjacentHTML("afterend", `
   <a id="zoziology-ebird-gps" class="Button Button--tiny Button--hollow u-margin-none u-showForMedium" style="padding: .25rem .4rem;" href="#">
   Download
@@ -68,4 +68,22 @@ document.addEventListener("click", function (e) {
   }
 });
 
+
+var els2 = document.querySelector("#main > div.Page-section.Page-section--primaryLight.Page-section--grid-heading > div > div > div:nth-child(2) > section > div > div.GridFlex-cell.u-sizeFill > div.GridFlex.GridFlex--alignMiddle > div > div > a");
+if (els2) {
+  const locid = els2.href.split("locID=")[1].split("&")[0]
+  els2.
+    insertAdjacentHTML("afterend", `
+  <a href="/mylocations/edit/${locid}" class="Button Button--tiny Button--hollow u-showForMedium" style="align-self:center; flex-shrink:0; padding:.25rem .4rem; margin-left:5px; margin-bottom:0px;">
+  Manage Location
+</a>`)
+  var els3 = document.querySelector("#checklist-tools");
+  els3.querySelectorAll("li")[3].
+    insertAdjacentHTML("afterend", `
+<li>												
+<a href="/mylocations/edit/${locid}" class="ToggleDropdown-panel-link">
+  <strong>Manage Location</strong>
+</a>
+</li>`)
+}
 
