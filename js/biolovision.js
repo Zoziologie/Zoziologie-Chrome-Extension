@@ -28,7 +28,7 @@ document.addEventListener("click", function (e) {
   if (target) {
 
     var url = new URL(window.location.href);
-    const filename = window.location.href.split("?")[1]
+    const filename = window.location.href.split("?")[1].substring(0, 190)
     if (url.searchParams.get("sp_FChoice") == 'species') {
       var data = [];
 

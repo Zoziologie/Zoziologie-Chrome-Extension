@@ -12,7 +12,7 @@ document.addEventListener("click", function (e) {
     const target = e.target.closest("#zoziology-barchart");
     if (target) {
         const url = "https://ebird.org/barchartData?" + window.location.href.split("?")[1] + "&fmt=json"
-        const filename = "barchartData_" + window.location.href.split("?")[1]
+        const filename = "barchartData_" + window.location.href.split("?")[1].substring(0, 190)
         fetch(url).then((response) => response.json())
             .then((data) => {
                 if (data.dataRows.length > 1) {

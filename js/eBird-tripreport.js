@@ -25,7 +25,7 @@ document.addEventListener("click", function (e) {
                     var encodedUri = encodeURI(csvContent);
                     var link = document.createElement("a");
                     link.setAttribute("href", encodedUri);
-                    const filename = document.querySelector(".ReportTitle-name").innerText.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                    const filename = document.querySelector(".ReportTitle-name").innerText.replace(/[^a-z0-9]/gi, '_').toLowerCase().substring(0, 190);
                     link.setAttribute("download", filename + '.csv');
                     link.click();
                 } else {

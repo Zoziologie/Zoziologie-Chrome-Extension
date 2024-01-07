@@ -35,7 +35,7 @@ document.addEventListener("click", function (e) {
       var encodedUri = encodeURI(csvContent);
       var link = document.createElement("a");
       link.setAttribute("href", encodedUri);
-      const filename = window.location.href.split("?")[1]
+      const filename = window.location.href.split("?")[1].substring(0, 190)
       link.setAttribute("download", filename + '.csv');
       link.click();
     } else {

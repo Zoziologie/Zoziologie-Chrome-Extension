@@ -57,7 +57,7 @@ document.addEventListener("click", function (e) {
       ]
     }`
     if (geojson.length > 1) {
-      const filename = window.location.pathname.split("/").pop();
+      const filename = window.location.pathname.split("/").pop().substring(0, 190);
       var link = document.createElement("a");
       link.setAttribute("href", encodeURI("data:text/json;charset=utf-8," + geojson));
       link.setAttribute("download", filename + '.geojson');
