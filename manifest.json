@@ -1,6 +1,6 @@
 {
   "name": "Zoziologie",
-  "version": "4.0",
+  "version": "5.0",
   "description": "Toolkit for web-birding",
   "permissions": [],
   "action": {
@@ -59,7 +59,9 @@
         "*://www.faune-paca.org/*",
         "*://www.faune-martinique.org/*",
         "*://www.faune-reunion.fr/*",
-        "*://www.faune-guyane.fr/*"
+        "*://www.faune-guyane.fr/*",
+        "*://www.faune-grandest.org/*",
+        "*://www.faune-aura.org/*"
       ],
       "js": [
         "js/biolovision.js"
