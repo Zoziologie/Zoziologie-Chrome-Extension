@@ -20,7 +20,7 @@ document.addEventListener("click", function (e) {
           speciesCode: res.querySelector('.ResultsStats-action a').href.split("/map/")[1].split("?")[0],
           commonName: res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a")).innerHTML.replace(/\r?\n|\r/g, '').replace(/\t/g, '').split(' <em')[0],
           sciName: res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a") + " em") ? res.querySelector(".SpecimenHeader-joined" + (cat == "hybrids" ? "" : " a") + " em").innerText : "",
-          frequency: res.querySelector('.StatsIcon-stat-count').innerText,
+          frequency: res.querySelector('.ResultsStats-stats .Heading').innerText,
           exoticCategory: res.querySelector(".ResultsStats-title button") ? res.querySelector(".ResultsStats-title button").title.split("Exotic: ")[1] : "Native"
         }
       })
