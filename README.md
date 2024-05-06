@@ -8,7 +8,7 @@ A set of tools to make your life easier on eBird and Biolovision (ornitho, faune
     - [1. Export Target](#1-export-target)
     - [2. Export Trip report](#2-export-trip-report)
     - [3. Export Barchart](#3-export-barchart)
-    - [4. Checklist: anchor link and Export GPS](#4-checklist-anchor-link-and-export-gps)
+    - [4. Checklist: anchor link to species, Export GPS track and Manage location](#4-checklist-anchor-link-to-species-export-gps-track-and-manage-location)
     - [5. Download Pictures](#5-download-pictures)
   - [Biolovision](#biolovision)
     - [1. Export Species List](#1-export-species-list)
@@ -60,8 +60,7 @@ First row is the normalization factor (i.e., number of checklists). There are 48
 ### 4. Checklist: anchor link to species, Export GPS track and Manage location
 
 - **Anchor link to species**: To share a specific sighting within your checklist, click on the link icon at the end of the line to copy the url of this entry on your clipboard. When opening this link, the page will automically scroll to this sighting.
-- **Export GPS track**: Export your track in [`.geojson`](https://geojson.org/) by clicking the download button under the map. 
-- **Manage location** (not visible on screenshot below): A new button, next to "Edit Location" will help you to nagivate to the Location page directly. 
+- **Manage location** (not visible on screenshot below): A new button, next to "Edit Location" will help you to nagivate to the Location page directly.
 
 ![image](assets/checklist.png)
 
