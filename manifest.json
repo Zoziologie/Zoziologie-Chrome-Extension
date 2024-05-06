@@ -63,65 +63,35 @@
         "*://www.faune-grandest.org/*",
         "*://www.faune-aura.org/*"
       ],
-      "js": [
-        "js/biolovision.js"
-      ]
+      "js": ["js/biolovision.js"]
     },
     {
-      "matches": [
-        "*://eBird.org/*targets*"
-      ],
-      "js": [
-        "js/eBird-target.js"
-      ]
+      "matches": ["*://eBird.org/*targets*"],
+      "js": ["js/eBird-target.js"]
     },
     {
-      "matches": [
-        "*://eBird.org/*checklist/*"
-      ],
-      "js": [
-        "js/eBird-checklist.js"
-      ]
+      "matches": ["*://eBird.org/*checklist/*"],
+      "js": ["js/eBird-checklist.js"]
     },
     {
-      "matches": [
-        "*://macaulaylibrary.org/asset*"
-      ],
-      "js": [
-        "js/macaulaylibrary.js"
-      ]
+      "matches": ["*://macaulaylibrary.org/asset*"],
+      "js": ["js/macaulaylibrary.js"]
     },
     {
-      "matches": [
-        "*://eBird.org/*tripreport/*"
-      ],
-      "js": [
-        "js/eBird-tripreport.js"
-      ]
+      "matches": ["*://eBird.org/*tripreport/*"],
+      "js": ["js/eBird-tripreport.js"]
     },
     {
-      "matches": [
-        "*://eBird.org/*mylocations/edit/*"
-      ],
-      "js": [
-        "js/eBird-mylocation.js"
-      ]
+      "matches": ["*://eBird.org/*mylocations/edit/*"],
+      "js": ["js/eBird-mylocation.js"]
     },
     {
-      "matches": [
-        "*://ebird.org/*barchart*"
-      ],
-      "js": [
-        "js/eBird-barchart.js"
-      ]
+      "matches": ["*://ebird.org/*barchart*"],
+      "js": ["js/eBird-barchart.js"]
     },
     {
-      "matches": [
-        "*://ebird.org/*region/*"
-      ],
-      "js": [
-        "js/eBird-region.js"
-      ]
+      "matches": ["*://ebird.org/*region/*"],
+      "js": ["js/eBird-region.js"]
     }
   ],
   "icons": {

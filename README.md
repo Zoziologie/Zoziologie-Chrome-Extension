@@ -13,6 +13,7 @@ A set of tools to make your life easier on eBird and Biolovision (ornitho, faune
   - [Biolovision](#biolovision)
     - [1. Export Species List](#1-export-species-list)
     - [2. Export Summary](#2-export-summary)
+    - [2. Export Lit](#2-export-lit)
 
 ## How to install?
 
@@ -39,8 +40,8 @@ Export your [Target](https://ebird.org/targets) list into a [comma-separated val
 Export your species list of a [trip report](https://ebird.org/mytripreports) into a csv using the new button "Download (csv)" next to share and edit.
 
 | `speciesCode` | `category` | `commonName`               | `sciName`           | `numIndividuals` | `numChecklists` | `numPhotos` | `numAudio` | `numVideo` | `isLifer` | `numMedia` | `exoticCategory` | `isPhotoLifer` | `exotiisAudioLifercCategory` |
-| ------------- | ---------- | -------------------------- | ------------------- | ---------------- | --------------- | ----------- | ---------- | ---------- | --------- | ---------- | ---------------- | ---------------- | ---------------- |
-| wfwduc1       | species    | White-faced Whistling-Duck | Dendrocygna viduata | 250              | 2               | 0           | 0          | 0          | FALSE     | 0          |                  | FALSE        |   FALSE      |
+| ------------- | ---------- | -------------------------- | ------------------- | ---------------- | --------------- | ----------- | ---------- | ---------- | --------- | ---------- | ---------------- | -------------- | ---------------------------- |
+| wfwduc1       | species    | White-faced Whistling-Duck | Dendrocygna viduata | 250              | 2               | 0           | 0          | 0          | FALSE     | 0          |                  | FALSE          | FALSE                        |
 
 ![image](assets/tripreport.png)
 
@@ -51,9 +52,9 @@ Export a [barchart](https://ebird.org/GuideMe?cmd=changeLocation) data into a cs
 First row is the normalization factor (i.e., number of checklists). There are 48 periods: 4 per months.
 
 | `speciesCode` | `category` | `commonName`     | `sciName`     | `exoticCategory` | `Jan1` | `Jan2` | `...` | `Dec4` |
-| ------------- | ---------- | ---------------- | ------------- | ---------------- | ------- | ------- | ----- | ------- |
-|               |            |                  |               |                  | 247     | 259     | ...   | 257     |
-| bahgoo        | species    | Bar-headed Goose | Anser indicus | N                | 0       | 0       | ...   | 0       |
+| ------------- | ---------- | ---------------- | ------------- | ---------------- | ------ | ------ | ----- | ------ |
+|               |            |                  |               |                  | 247    | 259    | ...   | 257    |
+| bahgoo        | species    | Bar-headed Goose | Anser indicus | N                | 0      | 0      | ...   | 0      |
 
 ![image](assets/barchart.png)
 
@@ -86,9 +87,9 @@ Create csv files from Biolovision **Specie List** (`m_id=94`) pages using the cs
 
 Create CSV files from Biolovision **Summary** (`m_id=32`) pages using the csv button on the export row. This output page is selected on the last tab of the **search engine** page (`m_id=8`). The exported table contains the following column:
 
-| `number` | `common_name` | `observers` | `place` | `link_photo` |`link_observations`                                                                                                                                                                                                                                                                                                                 | `link_stat`                                                                             | `link_info`                                                                                         |
-| -------- | ------------- | ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------- |
-| ~40      | Greylag Geese | 2 Observers | 2 places | <https://www.ornitho.ch/index.php?m_id=15&showback=stor&backlink=skip&y=2020&frmSpecies=60&sp_tg=1> | <https://www.ornitho.ch/index.php?m_id=94&showback=stor&p_c=5&p_cc=-1&sp_tg=1&sp_DateSynth=01.06.2020&sp_DChoice=range&sp_DFrom=01.06.2020&sp_DTo=01.06.2020&sp_SChoice=species&sp_S=60&sp_PChoice=canton&sp_cC=000100110000000000000011001001100000000000000000000&sp_FChoice=list&sp_FDisplay=DATE_PLACE_SPECIES&sp_DFormat=DESC> | <https://www.ornitho.ch/index.php?m_id=81&frmSpecies=60&showback=stor&cDate=2020-06-01> | 
+| `number` | `common_name` | `observers` | `place`  | `link_photo`                                                                                        | `link_observations`                                                                                                                                                                                                                                                                                                                 | `link_stat`                                                                             | `link_info` |
+| -------- | ------------- | ----------- | -------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ----------- |
+| ~40      | Greylag Geese | 2 Observers | 2 places | <https://www.ornitho.ch/index.php?m_id=15&showback=stor&backlink=skip&y=2020&frmSpecies=60&sp_tg=1> | <https://www.ornitho.ch/index.php?m_id=94&showback=stor&p_c=5&p_cc=-1&sp_tg=1&sp_DateSynth=01.06.2020&sp_DChoice=range&sp_DFrom=01.06.2020&sp_DTo=01.06.2020&sp_SChoice=species&sp_S=60&sp_PChoice=canton&sp_cC=000100110000000000000011001001100000000000000000000&sp_FChoice=list&sp_FDisplay=DATE_PLACE_SPECIES&sp_DFormat=DESC> | <https://www.ornitho.ch/index.php?m_id=81&frmSpecies=60&showback=stor&cDate=2020-06-01> |
 
 ![image](assets/summary.png)
 
@@ -96,8 +97,8 @@ Create CSV files from Biolovision **Summary** (`m_id=32`) pages using the csv bu
 
 Create CSV files from Biolovision **List** (`m_id=94`) pages using the csv button on the export row. This output page is selected on the last tab of the **search engine** page (`m_id=8`). The exported table contains the following column:
 
-| `date` | `place` | `place_link` | `number` | `common_name` | `scientific_name` | `remark` |
-| ------ | ------- | ------------ | -------- | ------------- | ----------------- | -------- |
-| 06.01.24 | Widensolen (village) / Widensolen (68) | <https://www.faune-grandest.org/index.php?m_id=52&id=1153273> | 2 | Bécasses des bois | Scolopax rusticola | Remarque :observation de mon salon en vol | 
+| `date`   | `place`                                | `place_link`                                                  | `number` | `common_name`     | `scientific_name`  | `remark`                                  |
+| -------- | -------------------------------------- | ------------------------------------------------------------- | -------- | ----------------- | ------------------ | ----------------------------------------- |
+| 06.01.24 | Widensolen (village) / Widensolen (68) | <https://www.faune-grandest.org/index.php?m_id=52&id=1153273> | 2        | Bécasses des bois | Scolopax rusticola | Remarque :observation de mon salon en vol |
 
-*No screen shot*
+_No screen shot_
