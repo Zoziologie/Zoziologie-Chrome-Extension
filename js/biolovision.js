@@ -50,7 +50,12 @@ document.addEventListener("click", function (e) {
         var d = [];
         d.push(parseInt(row.getElementsByClassName("text-right col-sm-1")[0].innerHTML)); //number
         d.push(row.querySelectorAll("b")[0].innerText); // English
-        d.push(row.querySelectorAll(".sci_name")[0].innerText.replace("(", "").replace(")", "")); //latin
+        var sci_name = row.querySelectorAll(".sci_name");
+        if (sci_name.length > 0) {
+          d.push(sci_name[0].innerText.replace("(", "").replace(")", "")); //latin
+        } else {
+          d.push("");
+        }
 
         d.push(row.querySelectorAll("i:not([class])")[0].innerText); //Date latest sighting
         row.querySelectorAll("i")[2]
