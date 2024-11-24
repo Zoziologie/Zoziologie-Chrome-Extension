@@ -26,8 +26,8 @@ document.addEventListener("click", function (e) {
           const header = Object.keys(data[0]);
           const array = data.map((it) => header.map((h) => it[h].toString()));
           array.unshift(header);
-          var csvContent = "data:text/csv;charset=utf-8," + array.join("\n");
-          var encodedUri = encodeURI(csvContent);
+          const csvContent = "\uFEFF" + array.join("\n");
+          const encodedUri = "data:text/csv;charset=utf-8," + encodeURIComponent(csvContent);
           var link = document.createElement("a");
           link.setAttribute("href", encodedUri);
           const filename = document

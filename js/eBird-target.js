@@ -53,11 +53,13 @@ document.addEventListener("click", function (e) {
       const array = [Object.keys(data[0])]
         .concat(data)
         .map((it) => {
-          return Object.values(it).toString();
+          return Object.values(it).join(",").toString();
         })
         .join("\n");
-      var csvContent = "data:text/csv;charset=utf-8," + array;
-      var encodedUri = encodeURI(csvContent);
+
+      const csvContent = "\uFEFF" + array; // Adding BOM for proper UTF-8 encoding
+      const encodedUri = "data:text/csv;charset=utf-8," + encodeURIComponent(csvContent);
+
       var link = document.createElement("a");
       link.setAttribute("href", encodedUri);
       const filename = window.location.href.split("?")[1].substring(0, 190);
