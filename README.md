@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d36af99b-e7d0-4a18-8361-a8c22d7534f1)# Zoziologie Chrome Extension
+# Zoziologie Chrome Extension
 
 A set of tools to make your life easier on eBird and Biolovision (ornitho, faune-...)
 
