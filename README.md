@@ -1,4 +1,4 @@
-# Zoziologie Chrome Extension
+![image](https://github.com/user-attachments/assets/d36af99b-e7d0-4a18-8361-a8c22d7534f1)# Zoziologie Chrome Extension
 
 A set of tools to make your life easier on eBird and Biolovision (ornitho, faune-...)
 
@@ -39,7 +39,7 @@ Export your [Target](https://ebird.org/targets) list into a [comma-separated val
 
 Export your species list of a [trip report](https://ebird.org/mytripreports) into a csv using the new button "Download (csv)" next to share and edit.
 
-| `speciesCode` | `category` | `commonName`               | `sciName`           | `numIndividuals` | `numChecklists` | `numPhotos` | `numAudio` | `numVideo` | `isLifer` | `numMedia` | `exoticCategory` | `isPhotoLifer` | `exotiisAudioLifercCategory` |
+| `speciesCode` | `category` | `commonName`               | `sciName`           | `numIndividuals` | `numChecklists` | `numPhotos` | `numAudio` | `numVideo` | `isLifer` | `numMedia` | `exoticCategory` | `isPhotoLifer` | `isAudioLifer` |
 | ------------- | ---------- | -------------------------- | ------------------- | ---------------- | --------------- | ----------- | ---------- | ---------- | --------- | ---------- | ---------------- | -------------- | ---------------------------- |
 | wfwduc1       | species    | White-faced Whistling-Duck | Dendrocygna viduata | 250              | 2               | 0           | 0          | 0          | FALSE     | 0          |                  | FALSE          | FALSE                        |
 
