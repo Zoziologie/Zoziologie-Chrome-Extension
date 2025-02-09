@@ -5,14 +5,18 @@ A set of tools to make your life easier on eBird and Biolovision (ornitho, faune
 - [Zoziologie Chrome Extension](#zoziologie-chrome-extension)
   - [How to install?](#how-to-install)
   - [eBird](#ebird)
-    - [1. Export Target](#1-export-target)
-    - [2. Export Trip report](#2-export-trip-report)
-    - [3. Export Barchart](#3-export-barchart)
+    - [Export Target as CSV](#export-target-as-csv)
+    - [Search for Region as target](#search-for-region-as-target)
+    - [Export Trip report as CSV](#export-trip-report-as-csv)
+      - [Species Level](#species-level)
+      - [Observation Level](#observation-level)
+      - [Checklist Level](#checklist-level)
+    - [Export Barchart](#export-barchart)
     - [4. Checklist: anchor link to species, Export GPS track and Manage location](#4-checklist-anchor-link-to-species-export-gps-track-and-manage-location)
-    - [5. Download Pictures](#5-download-pictures)
+    - [Download Pictures](#download-pictures)
   - [Biolovision](#biolovision)
-    - [1. Export Species List](#1-export-species-list)
-    - [2. Export Summary](#2-export-summary)
+    - [Export Species List](#export-species-list)
+    - [Export Summary](#export-summary)
     - [2. Export Lit](#2-export-lit)
 
 ## How to install?
@@ -37,35 +41,41 @@ Export your [Target](https://ebird.org/targets) list into a [comma-separated val
 
 ### Search for Region as target
 
-By default, in the target page, you can only search for parent region in the "For your: " list. With this extension, you can now search for any region. This is specifically useful when search target at a specific hotspot for its parent region. 
+By default, in the target page, you can only search for parent region in the "For your: " list. With this extension, you can now search for any region. This is specifically useful when search target at a specific hotspot for its parent region.
 
 <img width="534" alt="image" src="https://github.com/user-attachments/assets/b041eae5-8660-46eb-b769-09e160c042a4" />
 
 ### Export Trip report as CSV
 
-Export your [trip report](https://ebird.org/mytripreports) into a csv using the new button "Download (csv)" next to share and edit. There are three possible export:
+Export your [trip report](https://ebird.org/mytripreports) into a csv using the new button "Download (csv)" next to share and edit. Make sure to select the correct "DATA FOR:" according to what you want to download. There are three possible export:
 
-**Species Level**
+#### Species Level
 
-|speciesCode|category  |commonName|sciName  |numIndividuals|numChecklists   |numPhotos |numAudio                                                      |numVideo   |isLifer   |numMedia|exoticCategory|isPhotoLifer|isAudioLifer|
-|-----------|----------|----------|---------|--------------|----------------|----------|--------------------------------------------------------------|-----------|----------|--------|--------------|------------|------------|
-|ostric2    |species   |Common Ostrich|Struthio camelus|9             |2               |0         |0                                                             |0          |FALSE     |0       |              |FALSE       |FALSE       |
+Each row correspond to a species.
 
-**Observation Level**
+| speciesCode | category | commonName     | sciName          | numIndividuals | numChecklists | numPhotos | numAudio | numVideo | isLifer | numMedia | exoticCategory | isPhotoLifer | isAudioLifer |
+| ----------- | -------- | -------------- | ---------------- | -------------- | ------------- | --------- | -------- | -------- | ------- | -------- | -------------- | ------------ | ------------ |
+| ostric2     | species  | Common Ostrich | Struthio camelus | 9              | 2             | 0         | 0        | 0        | FALSE   | 0        |                | FALSE        | FALSE        |
 
-|*same as species level* |subId     |obsDt|locName  |howMany|
-|------------|----------|-----|---------|-------|
-|*same as species level*        |S212383195|08.02.2025 10:20|Dassenberg Drive, Western Cape, ZA (-33.463, 18.445)|6      |
+#### Observation Level
 
-**Checklist Level**
+Each row correspond to a observations, which is similar to when clicking on "showing all details".
 
-|locId    |subId     |numSpecies|obsDt    |obsTime|isoObsDate      |subID     |name                                                          |latitude   |longitude |countryCode|countryName |subnational1Name|subnational1Code|isHotspot|locName                                                       |hierarchicalName                                                                |locID    |lat        |lng       |
-|---------|----------|----------|---------|-------|----------------|----------|--------------------------------------------------------------|-----------|----------|-----------|------------|----------------|----------------|---------|--------------------------------------------------------------|--------------------------------------------------------------------------------|---------|-----------|----------|
-|L40063346|S212444111|1         |08.Feb.25|18:25  |08.02.2025 18:25|S212444111|West Coast Road, Cape Town, Western Cape, ZA (-33.586, 18.399)|-33.5855343|18.3994637|ZA         |South Africa|Western Cape    |ZA-WC           |FALSE    |West Coast Road, Cape Town, Western Cape, ZA (-33.586, 18.399)|West Coast Road, Cape Town, Western Cape, ZA (-33.586, 18.399), Western Cape, ZA|L40063346|-33.5855343|18.3994637|
+| _same as species level_ | subId      | obsDt            | locName                                              | howMany |
+| ----------------------- | ---------- | ---------------- | ---------------------------------------------------- | ------- |
+| _same as species level_ | S212383195 | 08.02.2025 10:20 | Dassenberg Drive, Western Cape, ZA (-33.463, 18.445) | 6       |
+
+#### Checklist Level
+
+Each row correspond to a checklist, similar to the checklists view
+
+| locId     | subId      | numSpecies | obsDt     | obsTime | isoObsDate       | subID      | name                                                           | latitude    | longitude  | countryCode | countryName  | subnational1Name | subnational1Code | isHotspot | locName                                                        | hierarchicalName                                                                 | locID     | lat         | lng        |
+| --------- | ---------- | ---------- | --------- | ------- | ---------------- | ---------- | -------------------------------------------------------------- | ----------- | ---------- | ----------- | ------------ | ---------------- | ---------------- | --------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------- | --------- | ----------- | ---------- |
+| L40063346 | S212444111 | 1          | 08.Feb.25 | 18:25   | 08.02.2025 18:25 | S212444111 | West Coast Road, Cape Town, Western Cape, ZA (-33.586, 18.399) | -33.5855343 | 18.3994637 | ZA          | South Africa | Western Cape     | ZA-WC            | FALSE     | West Coast Road, Cape Town, Western Cape, ZA (-33.586, 18.399) | West Coast Road, Cape Town, Western Cape, ZA (-33.586, 18.399), Western Cape, ZA | L40063346 | -33.5855343 | 18.3994637 |
 
 ![image](assets/tripreport.png)
 
-### 3. Export Barchart
+### Export Barchart
 
 Export a [barchart](https://ebird.org/GuideMe?cmd=changeLocation) data into a csv using the new button "Download (csv)" on top of the table.
 
@@ -85,7 +95,7 @@ First row is the normalization factor (i.e., number of checklists). There are 48
 
 ![image](assets/checklist.png)
 
-### 5. Download Pictures
+### Download Pictures
 
 Download any photos on the Macaulay library at 2400px wide resolution (the original is only available for the author) using the new button "Download 2400".
 
@@ -93,7 +103,7 @@ Download any photos on the Macaulay library at 2400px wide resolution (the origi
 
 ## Biolovision
 
-### 1. Export Species List
+### Export Species List
 
 Create csv files from Biolovision **Specie List** (`m_id=94`) pages using the csv button on the export row. This output page is selected on the last tab of the **search engine** page (`m_id=8`). The exported table contains the following columns:
 
@@ -103,7 +113,7 @@ Create csv files from Biolovision **Specie List** (`m_id=94`) pages using the cs
 
 ![image](assets/species.png)
 
-### 2. Export Summary
+### Export Summary
 
 Create CSV files from Biolovision **Summary** (`m_id=32`) pages using the csv button on the export row. This output page is selected on the last tab of the **search engine** page (`m_id=8`). The exported table contains the following column:
 
