@@ -23,7 +23,7 @@ Install the extension directly from the [chrome web store](<[Zoziologie](https:/
 
 ## eBird
 
-### 1. Export Target
+### Export Target as CSV
 
 Export your [Target](https://ebird.org/targets) list into a [comma-separated value (csv)](https://en.wikipedia.org/wiki/Comma-separated_values) using the new button "Download (csv)" next to "Print". The exported table contains the following columns:
 
@@ -35,13 +35,33 @@ Export your [Target](https://ebird.org/targets) list into a [comma-separated val
 
 ![image](assets/target.png)
 
-### 2. Export Trip report
+### Search for Region as target
 
-Export your species list of a [trip report](https://ebird.org/mytripreports) into a csv using the new button "Download (csv)" next to share and edit.
+By default, in the target page, you can only search for parent region in the "For your: " list. With this extension, you can now search for any region. This is specifically useful when search target at a specific hotspot for its parent region. 
 
-| `speciesCode` | `category` | `commonName`               | `sciName`           | `numIndividuals` | `numChecklists` | `numPhotos` | `numAudio` | `numVideo` | `isLifer` | `numMedia` | `exoticCategory` | `isPhotoLifer` | `isAudioLifer` |
-| ------------- | ---------- | -------------------------- | ------------------- | ---------------- | --------------- | ----------- | ---------- | ---------- | --------- | ---------- | ---------------- | -------------- | ---------------------------- |
-| wfwduc1       | species    | White-faced Whistling-Duck | Dendrocygna viduata | 250              | 2               | 0           | 0          | 0          | FALSE     | 0          |                  | FALSE          | FALSE                        |
+<img width="534" alt="image" src="https://github.com/user-attachments/assets/b041eae5-8660-46eb-b769-09e160c042a4" />
+
+### Export Trip report as CSV
+
+Export your [trip report](https://ebird.org/mytripreports) into a csv using the new button "Download (csv)" next to share and edit. There are three possible export:
+
+**Species Level**
+
+|speciesCode|category  |commonName|sciName  |numIndividuals|numChecklists   |numPhotos |numAudio                                                      |numVideo   |isLifer   |numMedia|exoticCategory|isPhotoLifer|isAudioLifer|
+|-----------|----------|----------|---------|--------------|----------------|----------|--------------------------------------------------------------|-----------|----------|--------|--------------|------------|------------|
+|ostric2    |species   |Common Ostrich|Struthio camelus|9             |2               |0         |0                                                             |0          |FALSE     |0       |              |FALSE       |FALSE       |
+
+**Observation Level**
+
+|*same as species level* |subId     |obsDt|locName  |howMany|
+|------------|----------|-----|---------|-------|
+|*same as species level*        |S212383195|08.02.2025 10:20|Dassenberg Drive, Western Cape, ZA (-33.463, 18.445)|6      |
+
+**Checklist Level**
+
+|locId    |subId     |numSpecies|obsDt    |obsTime|isoObsDate      |subID     |name                                                          |latitude   |longitude |countryCode|countryName |subnational1Name|subnational1Code|isHotspot|locName                                                       |hierarchicalName                                                                |locID    |lat        |lng       |
+|---------|----------|----------|---------|-------|----------------|----------|--------------------------------------------------------------|-----------|----------|-----------|------------|----------------|----------------|---------|--------------------------------------------------------------|--------------------------------------------------------------------------------|---------|-----------|----------|
+|L40063346|S212444111|1         |08.Feb.25|18:25  |08.02.2025 18:25|S212444111|West Coast Road, Cape Town, Western Cape, ZA (-33.586, 18.399)|-33.5855343|18.3994637|ZA         |South Africa|Western Cape    |ZA-WC           |FALSE    |West Coast Road, Cape Town, Western Cape, ZA (-33.586, 18.399)|West Coast Road, Cape Town, Western Cape, ZA (-33.586, 18.399), Western Cape, ZA|L40063346|-33.5855343|18.3994637|
 
 ![image](assets/tripreport.png)
 
