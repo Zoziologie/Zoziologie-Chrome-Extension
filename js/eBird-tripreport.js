@@ -19,13 +19,13 @@ if (detail_btn) {
    </span>
    <div tabindex="-1" class="Dropdown-panel">
       <ul class="u-unlist">
-        <li>
-          <a href="" class="zoziology-tripreport" id="zoziology-tripreport-observation">Observations Level
-            <div class="LoadingAnimation LoadingAnimation--small" style="display: none;">
-              <svg alt="" aria-hidden="true" class="Icon Icon--spinner"><use xlink:href="#Icon--spinner"></use></svg>
-            </div> 
-          </a>
-        </li>
+      <li>
+            <a href="" class="zoziology-tripreport" id="zoziology-tripreport-checklist">Checklist Level
+              <div class="LoadingAnimation LoadingAnimation--small" style="display: none;">
+                <svg alt="" aria-hidden="true" class="Icon Icon--spinner"><use xlink:href="#Icon--spinner"></use></svg>
+              </div> 
+            </a>
+         </li>
         <li>
             <a href="" class="zoziology-tripreport" id="zoziology-tripreport-species">Species Level
               <div class="LoadingAnimation LoadingAnimation--small" style="display: none;">
@@ -34,12 +34,12 @@ if (detail_btn) {
             </a>
          </li>
          <li>
-            <a href="" class="zoziology-tripreport" id="zoziology-tripreport-checklist">Checklist Level
-              <div class="LoadingAnimation LoadingAnimation--small" style="display: none;">
-                <svg alt="" aria-hidden="true" class="Icon Icon--spinner"><use xlink:href="#Icon--spinner"></use></svg>
-              </div> 
-            </a>
-         </li>
+          <a href="" class="zoziology-tripreport" id="zoziology-tripreport-observation">Observations Level
+            <div class="LoadingAnimation LoadingAnimation--small" style="display: none;">
+              <svg alt="" aria-hidden="true" class="Icon Icon--spinner"><use xlink:href="#Icon--spinner"></use></svg>
+            </div> 
+          </a>
+        </li>
       </ul>
    </div>
 </div>
@@ -78,7 +78,7 @@ document.addEventListener("click", async function (e) {
         ...loc, // Spread the properties of loc into the parent object
       }));
 
-      downloadCSV(dataFlat.flat());
+      downloadCSV(dataFlat.flat(), "checklists");
     } else {
       const urlList = tripReportPersonId
         ? `https://ebird.org/tripreport-internal/v1/taxon-list/${tripReportId}?tripReportPersonId=${tripReportPersonId}`
@@ -94,7 +94,7 @@ document.addEventListener("click", async function (e) {
           e.isAudioLifer = e.isAudioLifer || false;
         });
 
-        if (target.id == "zoziology-tripreport-species") {
+        if (target.id == "zoziology-tripreport-observation") {
           // Fetch details in parallel using Promise.all
           const detailedData = await Promise.all(
             data.map(async (e) => {
@@ -121,10 +121,9 @@ document.addEventListener("click", async function (e) {
               }
             })
           );
-
-          downloadCSV(detailedData.flat());
+          downloadCSV(detailedData.flat(), "observations");
         } else {
-          downloadCSV(data);
+          downloadCSV(data, "species");
         }
       } else {
         alert("No data to download. Make sure the targets list is displayed");
@@ -137,7 +136,7 @@ document.addEventListener("click", async function (e) {
 });
 
 // function to download data as CSV
-function downloadCSV(longData) {
+function downloadCSV(longData, type) {
   const header = Object.keys(longData[0]);
   const array = longData.map((it) =>
     header.map((h) => {
@@ -155,11 +154,14 @@ function downloadCSV(longData) {
   const encodedUri = "data:text/csv;charset=utf-8," + encodeURIComponent(csvContent);
   const link = document.createElement("a");
   link.setAttribute("href", encodedUri);
-  const filename = document
-    .querySelector(".ReportTitle-name")
-    .innerText.replace(/[^a-z0-9]/gi, "_")
-    .toLowerCase()
-    .substring(0, 190);
+  const filename =
+    document
+      .querySelector(".ReportTitle-name")
+      .innerText.replace(/[^a-z0-9]/gi, "_")
+      .toLowerCase()
+      .substring(0, 190) +
+    "_" +
+    type;
   link.setAttribute("download", filename + ".csv");
   document.body.appendChild(link);
   link.click();
