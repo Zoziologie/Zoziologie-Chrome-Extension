@@ -1,0 +1,9 @@
+/* Pre-hide elements we remove to avoid FOUC/flash */
+.rslides_container,
+.rslides_container2,
+.rightlogo,
+.bv--taxon-bar,
+#core-main-title,
+.toprightlogo {
+  display: none !important;
+}

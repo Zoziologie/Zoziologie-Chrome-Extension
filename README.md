@@ -12,12 +12,12 @@ A set of tools to make your life easier on eBird and Biolovision (ornitho, faune
       - [Observation Level](#observation-level)
       - [Checklist Level](#checklist-level)
     - [Export Barchart](#export-barchart)
-    - [4. Checklist: anchor link to species, Export GPS track and Manage location](#4-checklist-anchor-link-to-species-export-gps-track-and-manage-location)
+    - [Checklist: anchor link to species, Export GPS track and Manage location](#checklist-anchor-link-to-species-export-gps-track-and-manage-location)
     - [Download Pictures](#download-pictures)
   - [Biolovision](#biolovision)
     - [Export Species List](#export-species-list)
     - [Export Summary](#export-summary)
-    - [2. Export Lit](#2-export-lit)
+    - [Export Lit](#export-lit)
 
 ## How to install?
 
@@ -88,7 +88,7 @@ First row is the normalization factor (i.e., number of checklists). There are 48
 
 ![image](assets/barchart.png)
 
-### 4. Checklist: anchor link to species, Export GPS track and Manage location
+### Checklist: anchor link to species, Export GPS track and Manage location
 
 - **Anchor link to species**: To share a specific sighting within your checklist, click on the link icon at the end of the line to copy the url of this entry on your clipboard. When opening this link, the page will automically scroll to this sighting.
 - **Manage location** (not visible on screenshot below): A new button, next to "Edit Location" will help you to nagivate to the Location page directly.
@@ -123,7 +123,7 @@ Create CSV files from Biolovision **Summary** (`m_id=32`) pages using the csv bu
 
 ![image](assets/summary.png)
 
-### 2. Export Lit
+### Export Lit
 
 Create CSV files from Biolovision **List** (`m_id=94`) pages using the csv button on the export row. This output page is selected on the last tab of the **search engine** page (`m_id=8`). The exported table contains the following column:
 
